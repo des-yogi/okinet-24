@@ -1,0 +1,55 @@
+<!--DEV
+@ @include('blocks/page-header/page-header.html')
+-->
+
+<header class="page-header">
+  <div class="container  page-header__inner">
+
+    <div class="page-header__top">
+
+      <div class="page-header__left">
+        <a href="#" class="call-me-link">
+          <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone-call"></use></svg>
+          <span>Зателефонуйте мені</span>
+        </a>
+        @@include('../../blocks/social-links/social-links.html')
+      </div>
+
+      <div class="page-header__batt-wrapper">
+        <span class="battery-btn">
+          <svg width="32" height="16" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#battery"></use></svg>
+          <span>Інтернет без світла</span>
+        </span>
+      </div>
+
+      <div class="page-header__right">
+        <a href="tel:+380443000062" class="page-header__tel-link">+38 (044) 300-00-62</a>
+        <a href="#" class="page-header__tel-link  page-header__tel-link--user-top">
+          <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"></use></svg>
+          <span>Особистий кабінет</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="page-header__main">
+      @@include('../../blocks/logo/logo.html')
+
+      @@include('../../blocks/main-nav/main-nav.html')
+
+      <div class="page-header__service">
+        <a href="#" class="page-header__tel-link  page-header__tel-link--user  page-header__tel-link--user-main">
+          <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"></use></svg>
+          <span>Особистий кабінет</span>
+        </a>
+
+        @@include('../../blocks/burger/burger.html')
+
+        <button class="btn btn--primary page-header__connect-btn">
+          <span>Підключитись</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</header>
