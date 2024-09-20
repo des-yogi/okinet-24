@@ -1,0 +1,39 @@
+// В этом файле должны быть стили для БЭМ-блока burger, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+$toggler-part-height:         3px !default;
+$toggler-part-bg-color:       #000 !default;
+
+.burger {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  color: $white;
+  background-color: $main-color;
+  border-radius: 50%;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+  transition: all $transition-time;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: #97252c;
+  }
+
+  &:active {
+    background-color: #810e14;
+  }
+
+  @media (min-width: $screen-xl) {
+    display: none;
+  }
+}
