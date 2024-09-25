@@ -1,0 +1,131 @@
+<!--DEV
+@ @include('blocks/special-offers-block/special-offers-block.html')
+-->
+
+<div class="container  special-offers-block">
+
+  <div class="special-offers-block__header">
+    <div class="row  special-offers-block__header-row">
+      <div class="special-offers-block__col">
+        <h1 class="special-offers-block__title">Акції</h1>
+      </div>
+      <div class="special-offers-block__col">
+        <ul class="nav nav-tabs  special-offers-block__nav" id="spOfferTab" role="tablist">
+          <li class="nav-item  special-offers-block__item" role="presentation">
+            <button class="nav-link  special-offers-block__btn  active" id="tab-1" data-bs-toggle="tab" data-bs-target="#tab-pane-1" type="button" role="tab" aria-controls="tab-pane-2" aria-selected="true">Всі акції</button>
+          </li>
+          <li class="nav-item  special-offers-block__item" role="presentation">
+            <button class="nav-link  special-offers-block__btn" id="tab-2" data-bs-toggle="tab" data-bs-target="#tab-pane-2" type="button" role="tab" aria-controls="tab-pane-2" aria-selected="false">Для нових клієнтів</button>
+          </li>
+          <li class="nav-item  special-offers-block__item" role="presentation">
+            <button class="nav-link  special-offers-block__btn" id="tab-3" data-bs-toggle="tab" data-bs-target="#tab-pane-3" type="button" role="tab" aria-controls="tab-pane-3" aria-selected="false">Для існуючих клієнтів</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content  special-offers-block__content" id="spOfferTabContent">
+
+    <div class="tab-pane fade show active" id="tab-pane-1" role="tabpanel" aria-labelledby="tab-1" tabindex="0">
+      <div class="row  special-offers-block__inner-row">
+
+        <div class="special-offers-block__inner-col">
+          @@include('../../blocks/news-card/news-card.html', {
+            "title": "30-ти річчя Всесвітньої паутини!",
+            "img": "news-img"
+          })
+        </div>
+        <div class="special-offers-block__inner-col">
+          @@include('../../blocks/news-card/news-card.html', {
+            "title": "30-ти річчя Всесвітньої паутини!",
+            "img": "news-img"
+          })
+        </div>
+        <div class="special-offers-block__inner-col">
+          @@include('../../blocks/news-card/news-card.html', {
+            "title": "30-ти річчя Всесвітньої паутини!",
+            "img": "news-img"
+          })
+        </div>
+        <div class="special-offers-block__inner-col">
+          @@include('../../blocks/news-card/news-card.html', {
+            "title": "30-ти річчя Всесвітньої паутини!",
+            "img": "news-img"
+          })
+        </div>
+        <div class="special-offers-block__inner-col">
+          @@include('../../blocks/news-card/news-card.html', {
+            "title": "30-ти річчя Всесвітньої паутини!",
+            "img": "news-img"
+          })
+        </div>
+        <div class="special-offers-block__inner-col">
+          @@include('../../blocks/news-card/news-card.html', {
+            "title": "30-ти річчя Всесвітньої паутини!",
+            "img": "news-img"
+          })
+        </div>
+
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="tab-pane-2" role="tabpanel" aria-labelledby="tab-2" tabindex="0">
+      <div class="row  special-offers-block__inner-row">
+
+        <div class="special-offers-block__inner-col">
+          @@include('../../blocks/news-card/news-card.html', {
+            "title": "30-ти річчя Всесвітньої паутини!",
+            "img": "news-img"
+          })
+        </div>
+        <div class="special-offers-block__inner-col">
+          @@include('../../blocks/news-card/news-card.html', {
+            "title": "30-ти річчя Всесвітньої паутини!",
+            "img": "news-img"
+          })
+        </div>
+        <div class="special-offers-block__inner-col">
+          @@include('../../blocks/news-card/news-card.html', {
+            "title": "30-ти річчя Всесвітньої паутини!",
+            "img": "news-img"
+          })
+        </div>
+        <div class="special-offers-block__inner-col">
+          @@include('../../blocks/news-card/news-card.html', {
+            "title": "30-ти річчя Всесвітньої паутини!",
+            "img": "news-img"
+          })
+        </div>
+
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="tab-pane-3" role="tabpanel" aria-labelledby="tab-3" tabindex="0">
+      <div class="row  special-offers-block__inner-row">
+
+        <div class="special-offers-block__inner-col">
+          @@include('../../blocks/news-card/news-card.html', {
+            "title": "30-ти річчя Всесвітньої паутини!",
+            "img": "news-img"
+          })
+        </div>
+        <div class="special-offers-block__inner-col">
+          @@include('../../blocks/news-card/news-card.html', {
+            "title": "30-ти річчя Всесвітньої паутини!",
+            "img": "news-img"
+          })
+        </div>
+        <div class="special-offers-block__inner-col">
+          @@include('../../blocks/news-card/news-card.html', {
+            "title": "30-ти річчя Всесвітньої паутини!",
+            "img": "news-img"
+          })
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>

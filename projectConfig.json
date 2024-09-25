@@ -44,7 +44,12 @@
     "connect-modal": [],
     "swiper-controls": [],
     "banner-providex": [],
-    "accordion": []
+    "accordion": [],
+    "free-options": [],
+    "header-block": [],
+    "news-block": [],
+    "special-offers-block": [],
+    "address-list": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

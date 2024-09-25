@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Покриття</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас вимкнено JavaScript. Приносимо наші вибачення, але це ускладнює використання цього сайту.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+      <main class="main">
+
+        @@include('blocks/header-block/header-block.html', {
+          "title": "Покриття"
+        })
+
+        <section class="container  map" style="margin-top: 0;">
+          <div class="map__inner">
+
+            <h2 class="visually-hidden">Мапа покриття</h2>
+            <span class="map__label  h3">Покриття</span>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d96692.32478331028!2d30.50112437751867!3d50.44329547547549!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1727250006653!5m2!1sru!2sua" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <ul class="list-nostyled  map__legend">
+              <li class="map__item  map__item--xpon">
+                <span>
+                  <svg width="17" height="22" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ok-pin"></use></svg>
+                </span>
+                <p>XPON</p>
+              </li>
+              <li class="map__item  map__item--xpon-ethernet">
+                <span>
+                  <svg width="17" height="22" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ok-pin"></use></svg>
+                </span>
+                <p>XPON/Ethernet</p>
+              </li>
+              <li class="map__item  map__item--ethernet">
+                <span>
+                  <svg width="17" height="22" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ok-pin"></use></svg>
+                </span>
+                <p>Ethernet</p>
+              </li>
+            </ul>
+
+          </div>
+        </section>
+
+        @@include('blocks/customers-slider/customers-slider.html')
+
+        @@include('blocks/address-list/address-list.html')
+
+        @@include('blocks/about-block/about-block.html')
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  <!-- Modals -->
+  @@include('blocks/mob-menu/mob-menu.html')
+  @@include('blocks/call-me-modal/call-me-modal.html')
+  @@include('blocks/connect-modal/connect-modal.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

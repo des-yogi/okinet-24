@@ -1,13 +1,16 @@
 <!--DEV
-@ @include('blocks/tariffs-slider/tariffs-slider.html')
+@ @include('blocks/tariffs-slider/tariffs-slider.html', {
+  "titleTag"; "h2",
+  "mt0": "margin-top:0;"
+})
 -->
 
-<section class="container  tariffs-slider">
+<section class="container  tariffs-slider" style="@@mt0">
 
   <div class="tariffs-slider__header">
     <div class="row  tariffs-slider__header-row">
       <div class="tariffs-slider__col">
-        <h2 class="tariffs-slider__title">Пакети тарифів</h2>
+        <@@titleTag class="tariffs-slider__title">Пакети тарифів</@@titleTag>
       </div>
       <div class="tariffs-slider__col">
         <ul class="nav nav-tabs  tariffs-slider__nav" id="tariffTab" role="tablist">

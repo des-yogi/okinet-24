@@ -8,12 +8,40 @@
 <a href="#" class="news-card">
   <div class="embed-responsive  news-card__img">
     <picture>
+      <!--DEV размеры для слайдера: -->
+      <!--DEV 390x219, 585x329 2x -->
       <source srcset="img/@@img.webp, img/@@img.webp 2x" type="image/webp">
       <source srcset="img/@@img.jpg, img/@@img.jpg 2x">
-        <!-- 390x219, 585x329 2x -->
+      <!--DEV
+      размеры для отдельного блока:
+
+      <source srcset="img/news-img-305w.webp 305w,
+                      img/news-img-388w.webp 388w,
+                      img/news-img-500w.webp 500w,
+                      img/news-img-600w.webp 620w,
+                      img/news-img-700w.webp 740w,
+                      img/news-img-800w.webp 800w,
+                      img/news-img-900w.webp 900w"
+              sizes="(max-width: 767px) 100vw,
+                     (max-width: 1023px) 46vw,
+                     (max-width: 1279px) 30vw, 388px"
+              type="image/webp">
+      <source srcset="img/news-img-305w.jpg 305w,
+                      img/news-img-388w.jpg 388w,
+                      img/news-img-500w.jpg 500w,
+                      img/news-img-600w.jpg 620w,
+                      img/news-img-700w.jpg 740w,
+                      img/news-img-800w.jpg 800w,
+                      img/news-img-900w.jpg 900w"
+              sizes="(max-width: 767px) 100vw,
+                     (max-width: 1023px) 46vw,
+                     (max-width: 1279px) 30vw, 388px"
+      -->
       <img src="img/@@img.jpg" width="390" height="219" alt='@@title' loading="lazy">
     </picture>
-    <div class="swiper-lazy-preloader"></div>
+    <!--DEV расскомментировать для слайдера
+      <div class="swiper-lazy-preloader"></div>
+    -->
   </div>
 
   <div class="news-card__text">

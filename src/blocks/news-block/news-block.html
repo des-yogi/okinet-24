@@ -1,0 +1,53 @@
+<!--DEV
+@ @include('blocks/news-block/news-block.html')
+-->
+
+<div class="container  news-block">
+  <div class="row  news-block__row">
+
+    <div class="news-block__col">
+      @@include('../../blocks/news-card/news-card.html', {
+        "title": "30-ти річчя Всесвітньої паутини!",
+        "img": "news-img"
+      })
+    </div>
+
+    <div class="news-block__col">
+      @@include('../../blocks/news-card/news-card.html', {
+        "title": "20-ти річчя!",
+        "img": "news-img"
+      })
+    </div>
+
+    <div class="news-block__col">
+      @@include('../../blocks/news-card/news-card.html', {
+        "title": "30-ти річчя Всесвітньої паутини!",
+        "img": "news-img"
+      })
+    </div>
+
+    <div class="news-block__col">
+      @@include('../../blocks/news-card/news-card.html', {
+        "title": "30-ти річчя Всесвітньої паутини!",
+        "img": "news-img"
+      })
+    </div>
+
+    <div class="news-block__col">
+      @@include('../../blocks/news-card/news-card.html', {
+        "title": "20-ти річчя!",
+        "img": "news-img"
+      })
+    </div>
+
+    <div class="news-block__col">
+      @@include('../../blocks/news-card/news-card.html', {
+        "title": "30-ти річчя Всесвітньої паутини!",
+        "img": "news-img"
+      })
+    </div>
+
+  </div>
+
+  @@include('../../blocks/pagination/pagination.html')
+</div>
