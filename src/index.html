@@ -3,12 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Home page</title>
+  <title>Головна сторінка | OKiNET</title>
   @@include('_include/page_head.html')
 </head>
 
 <body>
-<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+<noscript>У вас вимкнено JavaScript. Приносимо наші вибачення, але це ускладнює використання цього сайту.</noscript>
 
   <div class="page__inner">
 
@@ -20,7 +20,10 @@
 
           @@include('blocks/hero/hero.html')
 
-          @@include('blocks/tariffs-slider/tariffs-slider.html')
+          @@include('blocks/tariffs-slider/tariffs-slider.html', {
+            "titleTag": "h2",
+            "mt0": ""
+          })
 
           @@include('blocks/news-slider/news-slider.html')
 

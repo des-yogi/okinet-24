@@ -1,0 +1,39 @@
+.address-list {
+  margin: 72px 0;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    margin: 0 0 24px;
+    text-align: center;
+  }
+
+  &__list {
+    column-count: 1;
+    column-fill: balance;
+    column-gap: 16px;
+
+    @media (min-width: $screen-md) {
+      column-count: 2;
+    }
+
+    @media (min-width: $screen-lg) {
+      column-count: 3;
+    }
+
+    @media (min-width: $screen-xl) {
+      column-count: 4;
+    }
+  }
+
+  &__item {
+    margin-bottom: 10px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 12px;
+    }
+  }
+
+  // &__link {
+  // }
+}

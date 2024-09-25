@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Новини</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас вимкнено JavaScript. Приносимо наші вибачення, але це ускладнює використання цього сайту.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+      <main class="main">
+
+        @@include('blocks/header-block/header-block.html', {
+          "title": "Новини"
+        })
+
+        @@include('blocks/news-block/news-block.html')
+
+        @@include('blocks/about-block/about-block.html')
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  <!-- Modals -->
+  @@include('blocks/mob-menu/mob-menu.html')
+  @@include('blocks/call-me-modal/call-me-modal.html')
+  @@include('blocks/connect-modal/connect-modal.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 <!--DEV
 @ @include('blocks/breadcrumbs/breadcrumbs.html')
-
 aria-current="page" - для ссылки на текущую страницу
+-->
 
 <nav class="container breadcrumbs" aria-label="Breadcrumb">
 
@@ -10,28 +10,27 @@ aria-current="page" - для ссылки на текущую страницу
     <li class="breadcrumbs__item" itemprop="itemListElement" itemscope
       itemtype="https://schema.org/ListItem">
       <a href="#" itemprop="item" class="breadcrumbs__link">
-       <span itemprop="name">Главная</span>
+       <span itemprop="name" class="visually-hidden">Головна</span>
+       <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#home"></use></svg>
       </a>
-      <meta itemprop="position" content="1" />
+      <meta itemprop="position" content="1">
     </li>
 
     <li class="breadcrumbs__item" itemprop="itemListElement" itemscope
       itemtype="https://schema.org/ListItem">
       <a href="#" itemprop="item" class="breadcrumbs__link">
-        <span itemprop="name">Страница 1</span>
+        <span itemprop="name">Сторінка Сторінка 1</span>
       </a>
-      <meta itemprop="position" content="2" />
+      <meta itemprop="position" content="2">
     </li>
 
     <li class="breadcrumbs__item" itemprop="itemListElement" itemscope
       itemtype="https://schema.org/ListItem">
       <span class="breadcrumbs__link" aria-current="page">
-        <span itemprop="name">Страница 2</span>
+        <span itemprop="name">Сторінка Сторінка Сторінка Сторінка 2</span>
       </span>
-      <meta itemprop="position" content="3" />
+      <meta itemprop="position" content="3">
     </li>
 
   </ol>
 </nav>
--->
-
