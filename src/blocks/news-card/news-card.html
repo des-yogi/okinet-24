@@ -1,0 +1,28 @@
+<!--DEV
+@ @include('blocks/news-card/news-card.html', {
+  "title": "30-ти річчя Всесвітньої паутини!",
+  "img": "news-img"
+})
+-->
+
+<a href="#" class="news-card">
+  <div class="embed-responsive  news-card__img">
+    <picture>
+      <source srcset="img/@@img.webp, img/@@img.webp 2x" type="image/webp">
+      <source srcset="img/@@img.jpg, img/@@img.jpg 2x">
+        <!-- 390x219, 585x329 2x -->
+      <img src="img/@@img.jpg" width="390" height="219" alt='@@title' loading="lazy">
+    </picture>
+    <div class="swiper-lazy-preloader"></div>
+  </div>
+
+  <div class="news-card__text">
+    <h3 class="h4  news-card__title">@@title</h3>
+    <p class="news-card__publishedon">
+      <time class="publishedon" datetime="2024-11-09">09.11.2024</time>
+      <span aria-hidden="true">
+        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#right-quot-sm"></use></svg>
+      </span>
+    </p>
+  </div>
+</a>

@@ -2,6 +2,71 @@
 @ @include('blocks/page-footer/page-footer.html')
 -->
 
-<footer class="page-footer">
-  page-footer
+<footer class="container  page-footer">
+
+  <div class="page-footer__inner">
+
+    <div class="page-footer__header">
+      @@include('../../blocks/logo/logo.html')
+
+      <nav class="page-footer__nav">
+        <ul class="list-nostyled  page-footer__nav-list">
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Новини</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Акції</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Тарифи</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Абонентам</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Телебачення</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Покриття</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Вакансії</a>
+          </li>
+        </ul>
+      </nav>
+
+      @@include('../../blocks/social-links/social-links.html')
+    </div>
+
+    <section class="page-footer__contacts">
+      <h3 class="visually-hidden">Контакти</h3>
+
+      <ul class="list-nostyled  page-footer__contact-list">
+        <li class="page-footer__contact-item  page-footer__contact-item--addr">
+          <span class="page-footer__contact-link">м.&nbsp;Київ, вул.&nbsp;Михайла Брайчевського,&nbsp;11А, офіс.&nbsp;1, м.&nbsp;Шулявська</span>
+        </li>
+        <li class="page-footer__contact-item  page-footer__contact-item--tel">
+          <a href="tel:+380443000062" class="page-footer__contact-link">+38 (044) 300-00-62</a>
+          <a href="tel:+380630731643" class="page-footer__contact-link">+38 (063) 073-16-43</a>
+        </li>
+        <li class="page-footer__contact-item  page-footer__contact-item--time">
+          <span class="page-footer__contact-link">
+            Пн-Сб: 9.00 - 21.00 <br>
+            Нд: Вихідний
+          </span>
+        </li>
+        <li class="page-footer__contact-item  page-footer__contact-item--email">
+          <a href="mailto:okinetcom@gmail.com" class="page-footer__contact-link">
+            okinetcom@gmail.com
+          </a>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+
+  <div class="page-footer__copyrights">
+    @@include('../../blocks/copyrights/copyrights.html')
+  </div>
+
 </footer>

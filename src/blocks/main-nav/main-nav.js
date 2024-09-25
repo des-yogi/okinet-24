@@ -1,7 +1,7 @@
 (function(){
 
   // Добавление/удаление модификаторов при клике на переключение видимости
-  const toggler = document.getElementById('main-nav-toggler');
+  var toggler = document.getElementById('main-nav-toggler');
   if(toggler){
     toggler.addEventListener('click', mainNavVisibleToggle);
 
@@ -13,9 +13,9 @@
   }
 
   // Добавление/удаление модификаторов при фокусировке на ссылочном элементе
-  const linkClassName = 'main-nav__link';
-  const linkClassNameShowChild = 'main-nav__item--show-child';
-  const findLinkClassName = new RegExp(linkClassName);
+  var linkClassName = 'main-nav__link';
+  var linkClassNameShowChild = 'main-nav__item--show-child';
+  var findLinkClassName = new RegExp(linkClassName);
   // Слежение за всплывшим событием focus (нужно добавить класс, показывающий потомков)
   document.addEventListener('focus', function(event) {
     // Если событие всплыло от одной из ссылок гл. меню
@@ -42,9 +42,9 @@
 
   // Добавление метода .parents()
   Element.prototype.parents = function(selector) {
-    const elements = [];
-    const elem = this;
-    let ishaveselector = selector !== undefined;
+    var elements = [];
+    var elem = this;
+    var ishaveselector = selector !== undefined;
 
     while ((elem = elem.parentElement) !== null) {
       if (elem.nodeType !== Node.ELEMENT_NODE) {

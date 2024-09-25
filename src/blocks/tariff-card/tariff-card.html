@@ -1,0 +1,73 @@
+<!--DEV
+@ @include('blocks/tariff-card/tariff-card.html', {
+  "tariffClass": "tariff-card--home",
+  "connectType": "XPON-Ethernet",
+  "textColorClass": "tariff-card__type--black",
+  "label": "ТОП",
+  "img": "home-1",
+  "title": "Комфорт 50",
+  "priceNew": "100 грн/місяць",
+  "priceOld": "",
+  "batInfo": "Працює без світла",
+  "addInfo": "Підключення за 1 грн при оплаті за 2 місяці",
+  "btnClass": "btn--primary-pale"
+})
+
+ btn--sp-offer
+-->
+
+<article class="swiper-slide  tariff-card  @@tariffClass">
+  <div class="tariff-card__inner">
+
+    <div class="tariff-card__top">
+      <div class="tariff-card__type  @@textColorClass">
+        <span>
+          <svg width="17" height="22" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ok-pin"></use></svg>
+        </span>
+        <p>@@connectType</p>
+      </div>
+      <div class="tariff-card__label">
+        <span>@@label</span>
+      </div>
+    </div>
+
+    <div class="tariff-card__img">
+      <picture>
+        <source srcset="img/@@img.webp, img/@@img.webp 2x" type="image/webp">
+        <source srcset="img/@@img.png, img/@@img.png 2x">
+        <img src="img/@@img.png" width="236" height="140" alt="Alt" loading="Lazy">
+      </picture>
+    </div>
+
+    <div class="tariff-card__header">
+      <h3 class="tariff-card__title">@@title</h3>
+      <p class="tariff-card__price">
+        <span>@@priceOld</span>
+        @@priceNew
+      </p>
+    </div>
+
+    <ul class="tariff-card__options">
+      <li class="tariff-card__option  tariff-card__option--active">Швидкість - 50 Мбит/с</li>
+      <li class="tariff-card__option  tariff-card__option--active">Зовнішня ІР</li>
+      <li class="tariff-card__option">Телебачення</li>
+      <li class="tariff-card__option">Преміум підтримка</li>
+    </ul>
+
+    <p class="tariff-card__battery">
+      <svg width="32" height="16.5" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#battery"></use></svg>
+      <span>@@batInfo</span>
+    </p>
+
+    <p class="tariff-card__add-info">
+      @@addInfo
+    </p>
+
+    <div class="tariff-card__order">
+      <button class="btn  @@btnClass">
+        <span>Замовити</span>
+      </button>
+    </div>
+
+  </div>
+</article>

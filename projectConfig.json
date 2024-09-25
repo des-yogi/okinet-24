@@ -28,7 +28,23 @@
     "typo": [],
     "battery-btn": [],
     "social-links": [],
-    "call-me-link": []
+    "call-me-link": [],
+    "mob-menu": [],
+    "hero": [],
+    "tariffs-slider": [],
+    "tariff-card": [],
+    "news-slider": [],
+    "news-card": [],
+    "map": [],
+    "customers-slider": [],
+    "about-block": [],
+    "faq": [],
+    "copyrights": [],
+    "call-me-modal": [],
+    "connect-modal": [],
+    "swiper-controls": [],
+    "banner-providex": [],
+    "accordion": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
@@ -61,7 +77,9 @@
     "./src/img/*.{jpg,jpeg,gif,png,svg,ico,webp}"
   ],
   "copiedCss": [],
-  "copiedJs": [],
+  "copiedJs": [
+    "./src/js/libs/wow.min.js"
+  ],
   "dirs": {
     "srcPath": "./src/",
     "buildPath": "./build/",
