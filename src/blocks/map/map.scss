@@ -1,0 +1,145 @@
+.map {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin: 72px 0 40px;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__inner {
+    position: relative;
+    height: 595px;
+    background-color: $gray-lightest;
+    border-radius: $border-radius;
+    border-top: 2px solid $text-color;
+    filter: drop-shadow(0 36px 14px rgba(0, 0, 0, 0.01)) drop-shadow(0 20px 12px rgba(0, 0, 0, 0.03)) drop-shadow(0 9px 9px rgba(0, 0, 0, 0.05)) drop-shadow(0 2px 5px rgba(0, 0, 0, 0.06));
+    overflow: hidden;
+
+    @media (min-width: $screen-md) {
+      height: 500px;
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 54px;
+    padding: 0 4px;
+    margin: 0;
+    color: $white;
+    background-color: $text-color;
+    transform: translateX(-50%);
+    user-select: none;
+    pointer-events: none;
+
+    &::before,
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 54px;
+      height: 54px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: 54px;
+      background-image: svg-load('../blocks/map/bg-img/curve-map.svg', fill=$text-color);
+    }
+
+    &::before {
+      left: -53px;
+      background-position: top right;
+      transform: scale(-1, 1);
+    }
+
+    &::after {
+      right: -53px;
+      background-position: top left;
+    }
+  }
+
+  &__legend {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+    pointer-events: none;
+
+    @media (min-width: $screen-md) {
+      left: 50%;
+      transform: translateX(-50%);
+      flex-direction: initial;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0 8px;
+    min-height: 32px;
+    padding: 2px;
+    font-weight: 500;
+    background-color: $white;
+    border-radius: $border-radius;
+
+    &--xpon {
+      color: $color-warning;
+      box-shadow: 0 43px 17px rgba(255, 138, 0, 0.01), 0 24px 15px rgba(255, 138, 0, 0.05), 0 11px 11px rgba(255, 138, 0, 0.09), 0 3px 6px rgba(255, 138, 0, 0.1);
+
+      span {
+        background-color: rgba($color-warning, 0.15);
+      }
+    }
+
+    &--xpon-ethernet {
+      color: $tag--purple;
+      box-shadow: 0 74px 30px rgba(140, 0, 251, 0.01), 0 42px 25px rgba(140, 0, 251, 0.05), 0 19px 19px rgba(140, 0, 251, 0.09), 0 5px 10px rgba(140, 0, 251, 0.1);
+
+      span {
+        background-color: rgba($tag--purple, 0.15);
+      }
+    }
+
+    &--ethernet {
+      color: $secondary-color;
+      box-shadow: 0 52px 21px rgba(0, 173, 29, 0.01), 0 29px 18px rgba(0, 173, 29, 0.05), 0 13px 13px rgba(0, 173, 29, 0.09), 0 3px 7px rgba(0, 173, 29, 0.1);
+
+      span {
+        background-color: rgba($secondary-color, 0.15);
+      }
+    }
+
+    p {
+      padding-right: 12px;
+      margin: 0;
+      transform: translateY(1px);
+      white-space: nowrap;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+
+      svg {
+        width: 17px;
+        height: 22px;
+        transform: translateY(1px);
+      }
+    }
+  }
+}

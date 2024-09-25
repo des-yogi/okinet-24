@@ -1,0 +1,14 @@
+.faq {
+  margin: 72px 0;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    @include col(xs, 12);
+    @include col(xl, 8);
+  }
+
+  &__title {
+    margin: 0 0 16px;
+  }
+}

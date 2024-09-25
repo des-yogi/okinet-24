@@ -1,0 +1,87 @@
+<!--DEV
+@ @include('blocks/mob-menu/mob-menu.html')
+-->
+
+<div class="mob-menu  modal fade" id="mobMenu" tabindex="-1" aria-labelledby="mobMenuLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-scrollable  modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title  visually-hidden" id="mobMenuLabel">Мобільне меню</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Закрити меню">
+          <span></span>
+        </button>
+        <div style="width:100%; margin-top: 16px;">
+          @@include('../../blocks/social-links/social-links.html')
+
+          <button class="call-me-link" data-bs-toggle="modal" data-bs-target="#callMeModal">
+            <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone-call"></use></svg>
+            <span>Зателефонуйте мені</span>
+          </button>
+
+          <button class="btn btn--primary page-header__connect-btn" data-bs-toggle="modal" data-bs-target="#connectMeModal">
+            <span>Підключитись</span>
+          </button>
+
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <nav class="mob-menu__nav">
+          <ul class="mob-menu__list" id="mobNavList">
+            <li class="mob-menu__item  mob-menu__item--parent  active">
+              <a class="mob-menu__link">Компанія</a>
+              <button class="mob-menu__toggler" data-bs-toggle="collapse" data-bs-target="#mobItemCollapse-1" aria-expanded="false" aria-controls="mobItemCollapse-1">
+                <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#down-quot"></use></svg>
+                <span class="visually-hidden">Відкрити подменю</span>
+              </button>
+              <ul class="mob-menu__submenu  collapse" id="mobItemCollapse-1" data-bs-parent="#mobNavList">
+                <li class="mob-menu__item  active">
+                  <a class="mob-menu__link">Новини</a>
+                </li>
+                <li class="mob-menu__item">
+                  <a href="#" class="mob-menu__link">Вакансії</a>
+                </li>
+              </ul>
+            </li>
+            <li class="mob-menu__item">
+              <a href="#" class="mob-menu__link">Акції</a>
+            </li>
+            <li class="mob-menu__item  mob-menu__item--parent">
+              <a href="#" class="mob-menu__link">Тарифи</a>
+              <button class="mob-menu__toggler" data-bs-toggle="collapse" data-bs-target="#mobItemCollapse-2" aria-expanded="false" aria-controls="mobItemCollapse-2">
+                <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#down-quot"></use></svg>
+                <span class="visually-hidden">Відкрити подменю</span>
+              </button>
+              <ul class="mob-menu__submenu  collapse" id="mobItemCollapse-2" data-bs-parent="#mobNavList">
+                <li class="mob-menu__item">
+                  <a href="#" class="mob-menu__link">Тариф 1</a>
+                </li>
+                <li class="mob-menu__item">
+                  <a href="#" class="mob-menu__link">Тариф 2</a>
+                </li>
+                <li class="mob-menu__item">
+                  <a href="#" class="mob-menu__link">Тариф 3</a>
+                </li>
+              </ul>
+            </li>
+            <li class="mob-menu__item">
+              <a href="#" class="mob-menu__link">Телебачення</a>
+            </li>
+            <li class="mob-menu__item">
+              <a href="#" class="mob-menu__link">Абонентам</a>
+            </li>
+            <li class="mob-menu__item">
+              <a href="#" class="mob-menu__link">Покриття</a>
+            </li>
+            <li class="mob-menu__item">
+              <a href="#" class="mob-menu__link">Магазин</a>
+            </li>
+            <li class="mob-menu__item">
+              <a href="#" class="mob-menu__link">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+.customers-slider {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin: 40px 0 0;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius--24;
+
+    @media (min-width: $screen-md) {
+      flex-direction: initial;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    margin: 0;
+
+    @media (min-width: $screen-md) {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__slide {
+    width: 184px;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  &__img {
+    margin-bottom: 8px;
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text {
+    padding-left: 3px;
+    margin: 0;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+}

@@ -1,0 +1,59 @@
+<!--DEV
+@ @include('blocks/news-slider/news-slider.html')
+-->
+
+<section class="container  news-slider">
+  <div class="swiper  news-slider__inner">
+
+    <div class="news-slider__header">
+      <h2 class="news-slider__title">Новини</h2>
+      @@include('../../blocks/swiper-controls/swiper-controls.html')
+    </div>
+
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide  news-slider__slide">
+        @@include('../../blocks/news-card/news-card.html', {
+          "title": "30-ти річчя Всесвітньої паутини!",
+          "img": "news-img"
+        })
+      </div>
+
+      <div class="swiper-slide  news-slider__slide">
+        @@include('../../blocks/news-card/news-card.html', {
+          "title": "20-ти річчя!",
+          "img": "news-img"
+        })
+      </div>
+
+      <div class="swiper-slide  news-slider__slide">
+        @@include('../../blocks/news-card/news-card.html', {
+          "title": "30-ти річчя Всесвітньої паутини!",
+          "img": "news-img"
+        })
+      </div>
+
+      <div class="swiper-slide  news-slider__slide">
+        @@include('../../blocks/news-card/news-card.html', {
+          "title": "30-ти річчя Всесвітньої паутини!",
+          "img": "news-img"
+        })
+      </div>
+
+      <div class="swiper-slide  news-slider__slide">
+        @@include('../../blocks/news-card/news-card.html', {
+          "title": "20-ти річчя!",
+          "img": "news-img"
+        })
+      </div>
+
+      <div class="swiper-slide  news-slider__slide">
+        @@include('../../blocks/news-card/news-card.html', {
+          "title": "30-ти річчя Всесвітньої паутини!",
+          "img": "news-img"
+        })
+      </div>
+
+    </div>
+  </div>
+</section>

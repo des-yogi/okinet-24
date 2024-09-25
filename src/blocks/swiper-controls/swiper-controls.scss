@@ -1,0 +1,98 @@
+.swiper-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 0 16px;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &:has(.swiper-pagination-lock),
+  &:has(.swiper-pagination:empty) {
+    display: none;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next,
+  .swiper-pagination {
+    position: static;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: flex;
+    min-width: 32px;
+    height: 32px;
+    background-color: $secondary-color--light;
+    border-radius: 50%;
+
+    &:hover,
+    &:focus {
+      background-color: #c1eec9;
+    }
+
+    &::after {
+      //display: none;
+      font-size: 0;
+      line-height: 0;
+      width: 32px;
+      height: 32px;
+      background-size: 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+      //background-image: svg-load('../blocks/sprite-svg/svg/right-quot.svg', fill=$secondary-color);
+    }
+  }
+
+  .swiper-button-prev {
+
+    &.swiper-button-disabled {
+
+      &::after {
+        background-image: svg-load('../blocks/sprite-svg/svg/left-quot.svg', fill=$text-muted) !important;
+      }
+    }
+
+    &::after {
+      background-image: svg-load('../blocks/sprite-svg/svg/left-quot.svg', fill=$secondary-color);
+    }
+  }
+
+  .swiper-button-next {
+
+    &.swiper-button-disabled {
+
+      &::after {
+        background-image: svg-load('../blocks/sprite-svg/svg/right-quot.svg', fill=$text-muted) !important;
+      }
+    }
+
+    &::after {
+      background-image: svg-load('../blocks/sprite-svg/svg/right-quot.svg', fill=$secondary-color);
+    }
+  }
+
+  .swiper-button-disabled {
+    background-color: #eeeeee !important;
+    opacity: 1;
+  }
+
+  .swiper-pagination {
+    //flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 12px;
+
+    .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+      margin: 0;
+      background-color: rgba($secondary-color, 0.25); //--light;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $secondary-color;
+    }
+  }
+
+}

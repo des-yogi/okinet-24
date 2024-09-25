@@ -1,0 +1,139 @@
+.mob-menu {
+
+  $block-name:                &; // #{$block-name}__element
+
+  @media (min-width: $screen-md) {
+
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    padding: 4px 0;
+
+    &.active {
+
+      & > #{$block-name}__link {
+        color: $main-color;
+      }
+    }
+
+    &--parent {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0 24px;
+
+      @media (min-width: $screen-md) {
+
+      }
+    }
+  }
+
+  &__link {
+    flex: 1 1 auto;
+    display: block;
+    color: $text-color;
+
+    &:hover,
+    &:focus {
+      color: $main-color;
+      text-decoration: none;
+    }
+  }
+
+  &__toggler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    color: $secondary-color;
+    background-color: #e4f3eb;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform $transition-time ease-in-out;
+
+    &[aria-expanded=true] {
+      //color: $main-color;
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__submenu {
+    flex: 1 0 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    #{$block-name}__item {
+
+      &:first-child {
+        margin-top: 6px;
+      }
+    }
+  }
+
+  .modal-dialog {
+
+    @media (min-width: $screen-md) {
+      max-width: 1200px;
+      margin-right: 36px;
+      margin-left: 36px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+  }
+
+  .modal-content {
+    border-radius: $border-radius--32;
+    box-shadow: 0 96px 39px rgba(0, 0, 0, 0.01), 0 54px 33px rgba(0, 0, 0, 0.03), 0 24px 24px rgba(0, 0, 0, 0.04), 0 6px 13px rgba(0, 0, 0, 0.05);
+
+    @media (min-width: $screen-md) {
+      transform: translateY(12px);
+    }
+  }
+
+  .modal-header {
+    flex-wrap: wrap;
+    border-bottom: none;
+  }
+
+  .close {
+    margin-top: -12px;
+    margin-right: -12px;
+  }
+
+  .social-links__list {
+    gap: 0 12px;
+  }
+
+  .call-me-link {
+    display: inline-flex;
+    padding: 8px;
+    margin-top: 16px;
+    font-size: 16px;
+  }
+
+  .page-header__connect-btn {
+    display: flex;
+    width: 100%;
+    margin-top: 16px;
+  }
+}

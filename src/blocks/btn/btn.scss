@@ -81,4 +81,52 @@
       background-color: #eeeeee !important;
     }
   }
+
+  &--primary-pale {
+    color: $text-color;
+    background-color: $main-color--light;
+    //border: 1px solid $color-main;
+
+    &:hover,
+    &:focus {
+      color: $text-color;
+      background-color: #deb2c4;
+      //border-color: darken($color-main, 12%);
+    }
+
+    &:active {
+      background-color: #d292a9;
+    }
+
+    &--disabled,
+    &:disabled {
+      cursor: not-allowed;
+      color: $text-muted !important;
+      background-color: #eeeeee !important;
+    }
+  }
+
+  &--sp-offer {
+    color: $text-color;
+    background-color: #e6d6f7;
+    //border: 1px solid $color-main;
+
+    &:hover,
+    &:focus {
+      color: $text-color;
+      background-color: #d3c2e6;
+      //border-color: darken($color-main, 12%);
+    }
+
+    &:active {
+      background-color: #b09ac7;
+    }
+
+    &--disabled,
+    &:disabled {
+      cursor: not-allowed;
+      color: $text-muted !important;
+      background-color: #eeeeee !important;
+    }
+  }
 }

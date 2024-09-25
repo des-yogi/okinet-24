@@ -1,0 +1,85 @@
+.hero {
+
+  $block-name:                &; // #{$block-name}__element
+
+  //position: relative;
+  padding: 24px;
+  border: 1px solid $border-color;
+  border-radius: $border-radius--24;
+
+  &__row {
+
+    @media (max-width: $screen-xl - 1) {
+      gap: 40px 0;
+    }
+  }
+
+  &__col-text {
+    @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 6);
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__col-img {
+    @include col(xs, 12);
+    @include col(xl, 6);
+  }
+
+  &__text {
+
+    @media (max-width: $screen-xl - 1) {
+      text-align: center;
+    }
+  }
+
+  &__descr {
+
+    p {
+      margin: 0;
+    }
+
+    p + p {
+      margin-top: 12px;
+    }
+  }
+
+  &__img {
+    border-radius: $border-radius--24;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__link {
+    margin-top: 40px;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: $screen-xl - 1) {
+      margin-top: 24px;
+    }
+
+    @media (min-width: $screen-xl) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}

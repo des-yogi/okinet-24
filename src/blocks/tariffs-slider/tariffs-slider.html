@@ -1,0 +1,227 @@
+<!--DEV
+@ @include('blocks/tariffs-slider/tariffs-slider.html')
+-->
+
+<section class="container  tariffs-slider">
+
+  <div class="tariffs-slider__header">
+    <div class="row  tariffs-slider__header-row">
+      <div class="tariffs-slider__col">
+        <h2 class="tariffs-slider__title">Пакети тарифів</h2>
+      </div>
+      <div class="tariffs-slider__col">
+        <ul class="nav nav-tabs  tariffs-slider__nav" id="tariffTab" role="tablist">
+          <li class="nav-item  tariffs-slider__item" role="presentation">
+            <button class="nav-link  tariffs-slider__btn  active" id="tab-1" data-bs-toggle="tab" data-bs-target="#tab-pane-1" type="button" role="tab" aria-controls="tab-pane-2" aria-selected="true">Для квартир</button>
+          </li>
+          <li class="nav-item  tariffs-slider__item" role="presentation">
+            <button class="nav-link  tariffs-slider__btn" id="tab-2" data-bs-toggle="tab" data-bs-target="#tab-pane-2" type="button" role="tab" aria-controls="tab-pane-2" aria-selected="false">Приватний сектор</button>
+          </li>
+          <li class="nav-item  tariffs-slider__item" role="presentation">
+            <button class="nav-link  tariffs-slider__btn" id="tab-3" data-bs-toggle="tab" data-bs-target="#tab-pane-3" type="button" role="tab" aria-controls="tab-pane-3" aria-selected="false">Бізнес</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content  tariffs-slider__content" id="tariffTabContent">
+
+    <div class="tab-pane fade show active" id="tab-pane-1" role="tabpanel" aria-labelledby="tab-1" tabindex="0">
+
+      <div class="swiper  tariffs-slider__home">
+
+        <div class="tariffs-slider__control-wrapper">
+          @@include('../../blocks/swiper-controls/swiper-controls.html')
+        </div>
+
+        <div class="swiper-wrapper">
+          <!-- --sp-offer -->
+
+          @@include('../../blocks/tariff-card/tariff-card.html', {
+            "tariffClass": "",
+            "connectType": "XPON-Ethernet",
+            "textColorClass": "",
+            "label": "",
+            "img": "home-1",
+            "title": "Комфорт 50",
+            "priceNew": "100 грн/місяць",
+            "priceOld": "",
+            "batInfo": "Працює без світла",
+            "addInfo": "Підключення за <b>1 грн</b> при оплаті за 2 місяці",
+            "btnClass": "btn--primary-pale"
+          })
+
+          @@include('../../blocks/tariff-card/tariff-card.html', {
+            "tariffClass": "",
+            "connectType": "XPON",
+            "textColorClass": "tariff-card__type--black",
+            "label": "",
+            "img": "home-2",
+            "title": "XPON 300",
+            "priceNew": "100 грн/місяць",
+            "priceOld": "250",
+            "batInfo": "Працює без світла",
+            "addInfo": "Підключення за <b>1 грн</b> при оплаті за 2 місяці",
+            "btnClass": "btn--primary-pale"
+          })
+
+          @@include('../../blocks/tariff-card/tariff-card.html', {
+            "tariffClass": "",
+            "connectType": "XPON-Ethernet",
+            "textColorClass": "",
+            "label": "ТОП",
+            "img": "home-3",
+            "title": "XPON 1G",
+            "priceNew": "300 грн/місяць",
+            "priceOld": "",
+            "batInfo": "Працює без світла",
+            "addInfo": "Підключення за <b>1 грн</b> при оплаті за 2 місяці",
+            "btnClass": "btn--primary-pale"
+          })
+
+          @@include('../../blocks/tariff-card/tariff-card.html', {
+            "tariffClass": "tariff-card--sp-offer",
+            "connectType": "XPON",
+            "textColorClass": "",
+            "label": "Акція",
+            "img": "home-4",
+            "title": "XPON 1G plus",
+            "priceNew": "400 грн/місяць",
+            "priceOld": "350",
+            "batInfo": "Працює без світла",
+            "addInfo": "Підключення за <b>1 грн</b> при оплаті за 2 місяці",
+            "btnClass": "btn--sp-offer"
+          })
+
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="tab-pane-2" role="tabpanel" aria-labelledby="tab-2" tabindex="0">
+      <div class="swiper  tariffs-slider__privat">
+
+        <div class="tariffs-slider__control-wrapper">
+          @@include('../../blocks/swiper-controls/swiper-controls.html')
+        </div>
+
+        <div class="swiper-wrapper">
+
+          @@include('../../blocks/tariff-card/tariff-card.html', {
+            "tariffClass": "",
+            "connectType": "XPON",
+            "textColorClass": "tariff-card__type--black",
+            "label": "",
+            "img": "privat-1",
+            "title": "Приват 100",
+            "priceNew": "350 грн/місяць",
+            "priceOld": "",
+            "batInfo": "Працює без світла",
+            "addInfo": "Підключення за <b>1 грн</b> при оплаті за 2 місяці",
+            "btnClass": "btn--primary-pale"
+          })
+
+          @@include('../../blocks/tariff-card/tariff-card.html', {
+            "tariffClass": "",
+            "connectType": "XPON",
+            "textColorClass": "tariff-card__type--black",
+            "label": "",
+            "img": "privat-2",
+            "title": "Приват 100 + ТБ",
+            "priceNew": "449 грн/місяць",
+            "priceOld": "",
+            "batInfo": "Працює без світла",
+            "addInfo": "Підключення за <b>1 грн</b> при оплаті за 2 місяці",
+            "btnClass": "btn--primary-pale"
+          })
+
+          @@include('../../blocks/tariff-card/tariff-card.html', {
+            "tariffClass": "",
+            "connectType": "XPON",
+            "textColorClass": "tariff-card__type--black",
+            "label": "ТОП",
+            "img": "privat-3",
+            "title": "Приват 1G",
+            "priceNew": "500 грн/місяць",
+            "priceOld": "",
+            "batInfo": "Працює без світла",
+            "addInfo": "Підключення за <b>1 грн</b> при оплаті за 2 місяці",
+            "btnClass": "btn--primary-pale"
+          })
+
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="tab-pane-3" role="tabpanel" aria-labelledby="tab-3" tabindex="0">
+      <div class="swiper  tariffs-slider__business">
+
+        <div class="tariffs-slider__control-wrapper">
+          @@include('../../blocks/swiper-controls/swiper-controls.html')
+        </div>
+
+        <div class="swiper-wrapper">
+
+          @@include('../../blocks/tariff-card/tariff-card.html', {
+            "tariffClass": "",
+            "connectType": "XPON",
+            "textColorClass": "tariff-card__type--black",
+            "label": "",
+            "img": "business-1",
+            "title": "Бізнес 50",
+            "priceNew": "Від 700 грн/місяць",
+            "priceOld": "",
+            "batInfo": "Працює без світла <b>до 72 год</b>",
+            "addInfo": "Підключення за <b>1 грн</b> при оплаті за 2 місяці",
+            "btnClass": "btn--primary-pale"
+          })
+
+          @@include('../../blocks/tariff-card/tariff-card.html', {
+            "tariffClass": "",
+            "connectType": "XPON",
+            "textColorClass": "tariff-card__type--black",
+            "label": "",
+            "img": "business-2",
+            "title": "Бізнес 100",
+            "priceNew": "Від 1200 грн/місяць",
+            "priceOld": "",
+            "batInfo": "Працює без світла <b>до 72 год</b>",
+            "addInfo": "Підключення за <b>1 грн</b> при оплаті за 2 місяці",
+            "btnClass": "btn--primary-pale"
+          })
+
+          @@include('../../blocks/tariff-card/tariff-card.html', {
+            "tariffClass": "",
+            "connectType": "XPON",
+            "textColorClass": "tariff-card__type--black",
+            "label": "ТОП",
+            "img": "business-3",
+            "title": "Бізнес 300",
+            "priceNew": "Від 2000 грн/місяць",
+            "priceOld": "",
+            "batInfo": "Працює без світла <b>до 72 год</b>",
+            "addInfo": "Підключення за <b>1 грн</b> при оплаті за 2 місяці",
+            "btnClass": "btn--primary-pale"
+          })
+
+          @@include('../../blocks/tariff-card/tariff-card.html', {
+            "tariffClass": "tariff-card--sp-offer",
+            "connectType": "XPON",
+            "textColorClass": "tariff-card__type--black",
+            "label": "Акція",
+            "img": "business-4",
+            "title": "Бізнес 1000",
+            "priceNew": "По запиту",
+            "priceOld": "",
+            "batInfo": "Працює без світла <b>до 72 год</b>",
+            "addInfo": "Підключення за <b>1 грн</b> при оплаті за 2 місяці",
+            "btnClass": "btn--sp-offer"
+          })
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>

@@ -3,14 +3,25 @@
   $block-name:                &; // #{$block-name}__element
 
   display: none;
+  align-items: center;
+  gap: 8px;
+  font-family: inherit;
+  font-size: $font-size-sm;
+  font-weight: 500;
+  color: $secondary-color--dark;
+  background-color: $white;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover,
+  &:focus {
+    color: $main-color;
+    //text-decoration: underline;
+  }
 
   @media (min-width: $screen-md) {
     display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: $font-size-sm;
-    font-weight: 500;
-    color: $secondary-color--dark;
   }
 
   svg {

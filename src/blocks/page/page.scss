@@ -261,6 +261,11 @@ a {
     padding-right: 36px;
   }
 
+  @media (min-width: $screen-lg) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
   @media (min-width: $screen-xl) {
     $padding-min: 40px; // нужный отступ от краев экрана
     $half-screen-xl: $screen-xl / 2 - $padding-min;
@@ -335,6 +340,17 @@ a {
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+.swiper-slide {
+  box-sizing: border-box;
+  height: auto;
+}
+
+.publishedon {
+  font-size: $font-size-sm;
+  font-weight: 500;
+  color: $text-muted;
 }
 
 // background-image: svg-load('../blocks/block-name/bg-img/phone.svg', fill=$main-color);

@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Home page</title>
   @@include('_include/page_head.html')
+  <link rel="stylesheet" href="css/banner-style.css">
 </head>
 
 <body>
@@ -16,17 +17,23 @@
       @@include('blocks/page-header/page-header.html')
 
       <main class="main">
+        <h1 class="visually-hidden">Интернет-провайдер OKiNET Home page</h1>
 
-        <div class="container">
+          @@include('blocks/hero/hero.html')
 
-          <h1>Заголовок 1</h1>
-          <h2>Заголовок 2</h2>
-          <p>
-            <a href="#">I'd far rather be happy than right any day.</a>
-          </p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga veritatis consequuntur explicabo, recusandae. Velit commodi aut dolorem, a reiciendis magni autem ipsum fugit, facere ipsa aliquid aliquam eos, consectetur fugiat? Corporis, eos nemo! Incidunt dicta voluptatem inventore aut perspiciatis ea excepturi iste non ratione quisquam qui alias aperiam numquam totam veritatis, rem tenetur voluptate quibusdam odit nisi in suscipit, hic, vitae veniam eligendi? Consequuntur maiores, cumque perferendis vero sequi aliquid corrupti ad odio nesciunt minus a minima illum maxime fugiat eos saepe itaque tempore dolores eveniet, numquam illo ipsam quam iusto explicabo ipsa! Sit pariatur suscipit reiciendis dicta iusto delectus repudiandae excepturi fuga repellat, in quos, sed alias autem nisi voluptate neque, ullam. Dicta enim quod in, recusandae a illum nulla error nostrum molestias hic modi molestiae placeat excepturi voluptatem sequi sed obcaecati, pariatur corrupti, quam perferendis soluta reprehenderit nemo animi. Sapiente, distinctio illum eaque labore eos modi beatae necessitatibus corporis architecto mollitia tempora consequuntur facere consequatur, similique aspernatur id, ratione voluptas officia. Dicta libero velit eligendi praesentium, illo voluptatem cupiditate iure maiores reprehenderit illum necessitatibus voluptatibus ipsum quae tenetur perspiciatis maxime debitis expedita nostrum cum nulla, animi labore, harum excepturi. Molestias amet iure, natus eos sit. Quidem saepe, laboriosam quod est beatae illo, pariatur sint dolores numquam eos repudiandae quibusdam deserunt iure, similique neque dignissimos. Placeat nobis cumque minus laboriosam dolorem maiores perspiciatis quibusdam ratione labore! Eum voluptatibus iusto consequatur aut suscipit. Explicabo iure odit quo hic molestias nesciunt ut illum. Non aspernatur placeat reprehenderit quam unde repudiandae modi nisi quia necessitatibus autem, vero debitis dignissimos corrupti excepturi ipsa, nesciunt quod nostrum dolorum, in aut! Quod placeat quasi error provident fuga quas voluptatum a, harum vitae eligendi modi architecto non quidem veritatis nisi accusantium nemo eaque doloribus ea perspiciatis recusandae quos vel. Rem impedit enim suscipit dicta tempore molestiae, quia beatae tenetur eaque nihil facilis totam non quam deserunt reprehenderit. Animi ullam magnam explicabo eveniet voluptas ab sequi ipsum quam quo cum, sunt sapiente pariatur cupiditate ducimus nisi quidem, molestias fugit impedit vel aspernatur? Ipsam ullam iure mollitia quae accusamus veritatis, at vel repellendus!  </p>
+          @@include('blocks/tariffs-slider/tariffs-slider.html')
 
-        </div>
+          @@include('blocks/news-slider/news-slider.html')
+
+          @@include('blocks/banner-providex/banner-providex.html')
+
+          @@include('blocks/map/map.html')
+
+          @@include('blocks/customers-slider/customers-slider.html')
+
+          @@include('blocks/about-block/about-block.html')
+
+          @@include('blocks/faq/faq.html')
 
       </main>
 
@@ -38,7 +45,31 @@
 
   </div>
 
+  <!-- Modals -->
+  @@include('blocks/mob-menu/mob-menu.html')
+  @@include('blocks/call-me-modal/call-me-modal.html')
+  @@include('blocks/connect-modal/connect-modal.html')
+
   @@include('_include/page_bottom.html')
+  <script src="js/wow.min.js"></script>
+  <script>
+    var wow = new WOW(
+      {
+        boxClass:     'wow',      // animated element css class (default is wow)
+        animateClass: 'animated', // animation css class (default is animated)
+        offset:       0,          // distance to the element when triggering the animation (default is 0)
+        mobile:       true,       // trigger animations on mobile devices (default is true)
+        live:         true,       // act on asynchronously loaded content (default is true)
+        callback:     function(box) {
+          // the callback is fired every time an animation is started
+          // the argument that is passed in is the DOM node being animated
+        },
+        scrollContainer: 'scroll-sample-box',    // optional scroll sample-box selector, otherwise use window,
+        resetAnimation: true,     // reset animation on end (default is true)
+      }
+    );
+    wow.init();
+  </script>
 
 </body>
 </html>
