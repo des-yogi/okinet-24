@@ -49,7 +49,14 @@
     "header-block": [],
     "news-block": [],
     "special-offers-block": [],
-    "address-list": []
+    "address-list": [],
+    "housing-estate": [],
+    "he-hero": [],
+    "sp-offer-article": [],
+    "countdown-block": [],
+    "share-modal": [],
+    "sp-offer-other": [],
+    "link-block": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

@@ -1,0 +1,25 @@
+.sp-offer-other {
+  padding: 24px;
+  background-color: $block-bg;
+  border-radius: $border-radius--24;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    margin: 0 0 16px;
+  }
+
+  &__item {
+
+    & + & {
+      margin-top: 16px;
+    }
+  }
+
+  &__all-links {
+    display: inline-flex;
+    padding: 10px 10px 10px 2px;
+    margin-top: 24px;
+    font-weight: 500;
+  }
+}

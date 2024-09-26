@@ -1,0 +1,34 @@
+<!--DEV
+@ @include('blocks/sp-offer-other/sp-offer-other.html', {
+  "blockTitle": "Інші акції",
+  "btnText": "Всі акції"
+})
+-->
+
+<aside class="sp-offer-other">
+  <h3 class="h4  sp-offer-other__title">@@blockTitle</h3>
+
+  <ul class="list-nostyled  sp-offer-other__list">
+
+    <li class="sp-offer-other__item">
+      @@include('../../blocks/link-block/link-block.html', {
+        "title": "Інтернет від Окінет в ЖК Комфорт Таун"
+      })
+    </li>
+
+    <li class="sp-offer-other__item">
+      @@include('../../blocks/link-block/link-block.html', {
+        "title": "Інтернет від Окінет"
+      })
+    </li>
+
+    <li class="sp-offer-other__item">
+      @@include('../../blocks/link-block/link-block.html', {
+        "title": "Ми оновили редизайн нашого сайту"
+      })
+    </li>
+
+  </ul>
+
+  <a href="#" class="sp-offer-other__all-links">@@btnText</a>
+</aside>

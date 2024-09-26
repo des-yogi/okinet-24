@@ -175,6 +175,11 @@ a {
   }
 }
 
+.main {
+  position: relative;
+  z-index: 0;
+}
+
 .fade {
   @include transition($transition-fade);
 

@@ -1,0 +1,42 @@
+<!--DEV
+@ @include('blocks/he-hero/he-hero.html')
+-->
+
+<div class="container  he-hero">
+  <div class="he-hero__inner">
+    <div class="row  he-hero__row">
+      <div class="he-hero__col">
+        <div class="he-hero__text">
+          <h1 class="he-hero__title">ЖК Campus</h1>
+          <p class="he-hero__intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, vel impedit praesentium quibusdam quisquam consequuntur, facilis blanditiis reprehenderit quidem nisi harum illum.</p>
+          <button class="btn btn--primary  he-hero__btn">
+            <span>Підключитись</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="he-hero__col">
+        <div class="embed-responsive embed-responsive--3-2  he-hero__img">
+          <picture>
+            <source srcset="img/he-banner.webp 450w,
+                            img/he-banner.webp 568w,
+                            img/he-banner.webp 620w,
+                            img/he-banner.webp 740w,
+                            img/he-banner.webp 980w"
+                    sizes="(max-width: 767px) 85vw,
+                           (max-width: 1279px) 650px, 568px"
+                    type="image/webp">
+            <source srcset="img/he-banner.jpg 450w,
+                            img/he-banner.jpg 568w,
+                            img/he-banner.jpg 620w,
+                            img/he-banner.jpg 740w,
+                            img/he-banner.jpg 980w"
+                    sizes="(max-width: 767px) 85vw,
+                           (max-width: 1279px) 650px, 568px">
+            <img src="img/he-banner.jpg" width="980" height="653" alt="Alt">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
