@@ -1,0 +1,46 @@
+.countdown-block {
+  padding: 24px;
+  background-color: $block-bg;
+  border-radius: $border-radius--24;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__cap {
+    margin-top: 0;
+  }
+
+  &__row {
+    gap: 16px 0;
+  }
+
+  &__col-countdown {
+    @include col(xs, 12);
+    @include col(md, 5);
+    @include col(xl, 12);
+  }
+
+  &__col-btn {
+    @include col(xs, 12);
+    @include col-offset(md, 2);
+    @include col(md, 5);
+    @include col-offset(xl, 0);
+    @include col(xl, 12);
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px 0;
+    height: 100%;
+  }
+
+  &__countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background-color: $white;
+    border-radius: $border-radius;
+  }
+}

@@ -1,0 +1,34 @@
+<!--DEV
+@ @include('blocks/countdown-block/countdown-block.html')
+-->
+
+<section class="countdown-block">
+  <h2 class="visually-hidden">Дата завершення поточної акційної пропозиції</h2>
+
+  <p class="h4  countdown-block__cap">До кінця акції:</p>
+
+  <div class="row  countdown-block__row">
+
+    <div class="countdown-block__col-countdown">
+      <div class="countdown-block__countdown">
+        @@include('../../blocks/countdown/countdown.html', {
+          "deadline": "December 31 2024 18:59:00 GMT+0300"
+        })
+      </div>
+    </div>
+
+    <div class="countdown-block__col-btn">
+      <div class="countdown-block__btns">
+        <button class="btn btn--primary">
+          <span>Підключитися</span>
+        </button>
+
+        <button class="btn btn--primary-pale">
+          <span>Поділитися з друзями</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+</section>

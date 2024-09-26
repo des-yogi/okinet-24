@@ -1,0 +1,48 @@
+.sp-offer-article {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    gap: 72px 0;
+  }
+
+  &__col-main {
+    @include col(xs, 12);
+    @include col(md, 12);
+    @include col(xl, 8);
+  }
+
+  &__col-aside {
+    @include col(xs, 12);
+    @include col(md, 12);
+    @include col(xl, 4);
+  }
+
+  &__img {
+    margin-bottom: 24px;
+    border-radius: $border-radius--24;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__title {
+    margin-top: 16px;
+  }
+
+  &__intro {
+    font-weight: 500;
+  }
+
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    gap: 72px 0;
+
+    @media (min-width: $screen-xl) {
+      gap: 40px 0;
+    }
+  }
+}

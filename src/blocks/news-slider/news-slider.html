@@ -1,12 +1,14 @@
 <!--DEV
-@ @include('blocks/news-slider/news-slider.html')
+@ @include('blocks/news-slider/news-slider.html', {
+  "title": "Новини"
+})
 -->
 
 <section class="container  news-slider">
   <div class="swiper  news-slider__inner">
 
     <div class="news-slider__header">
-      <h2 class="news-slider__title">Новини</h2>
+      <h2 class="news-slider__title">@@title</h2>
       @@include('../../blocks/swiper-controls/swiper-controls.html')
     </div>
 
