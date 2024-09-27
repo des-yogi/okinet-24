@@ -11,3 +11,6 @@
 * https://des-yogi.github.io/okinet-24/product
 * https://des-yogi.github.io/okinet-24/article
 * https://des-yogi.github.io/okinet-24/contacts
+* https://des-yogi.github.io/okinet-24/shop
+* https://des-yogi.github.io/okinet-24/for-customers
+* https://des-yogi.github.io/okinet-24/vacancies
