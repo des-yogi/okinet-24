@@ -1,0 +1,50 @@
+<!--DEV
+@ @include('blocks/contact-form/contact-form.html')
+-->
+
+<section class="contact-form">
+  <h2 class="visually-hidden">Форма швидкого зв'язку</h2>
+
+  <p class="h3  contact-form__title">Зв’яжіться з нами</p>
+  <p class="contact-form__warning">
+    (<span class="asterisk">*</span>) Ці поля обов’язкові для заповнення
+  </p>
+
+  <form class="contact-form__form" action="#" method="post">
+
+    <div class="contact-form__input-wrapper">
+      <label class="field-text">
+        <span class="field-text__name">Ім’я</span>
+        <span class="field-text__input-wrap">
+          <input class="field-text__input" type="text" name="name" value="" placeholder="Василь Алібабаєвич">
+          <span class="field-text__help-text" data-error="name">Текст помилки</span>
+        </span>
+      </label>
+
+      <label class="field-text">
+        <span class="field-text__name">Телефон<span class="asterisk">*</span></span>
+        <span class="field-text__input-wrap">
+          <input class="field-text__input  phone-mask" type="tel" name="tel" value="">
+          <span class="field-text__help-text" data-error="tel"></span>
+        </span>
+      </label>
+    </div>
+
+    <label class="field-text">
+      <span class="field-text__name">Ваше повідомлення</span>
+      <span class="field-text__input-wrap">
+        <textarea class="field-text__input" name="message" rows="4"></textarea>
+        <span class="field-text__help-text" data-error="name"></span>
+      </span>
+    </label>
+
+    <div class="contact-form__controls">
+      <img src="img/reCaptcha.gif" width="304" height="75" alt="">
+
+      <button class="btn  btn--primary" name="submit" type="submit">
+        <span>Відправити</span>
+      </button>
+    </div>
+  </form>
+
+</section>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Контакти</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас вимкнено JavaScript. Приносимо наші вибачення, але це ускладнює використання цього сайту.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+      <main class="main">
+
+        <div class="contacts">
+
+          @@include('blocks/header-block/header-block.html', {
+            "title": "Контакти"
+          })
+
+          <div class="container">
+
+            <ul class="list-nostyled  row  contacts__list">
+
+              <li class="contacts__col">
+                <div class="contact-card">
+                  <span class="contact-card__icon  contact-card__icon--user" aria-hidden="true"></span>
+                  <p class="contact-card__content">
+                    м. Київ, вул.&nbsp;Михайла Брайчевського,&nbsp;11А, офіс.&nbsp;1, м.&nbsp;Шулявська
+                  </p>
+                </div>
+              </li>
+
+              <li class="contacts__col">
+                <div class="contact-card">
+                  <span class="contact-card__icon  contact-card__icon--clock" aria-hidden="true"></span>
+                  <p class="contact-card__content">
+                    Пн-Сб: 9.00 - 21.00 <br>
+                    Нд: Вихідний
+                  </p>
+                </div>
+              </li>
+
+              <li class="contacts__col">
+                <div class="contact-card">
+                  <span class="contact-card__icon  contact-card__icon--phone" aria-hidden="true"></span>
+                  <p class="contact-card__content">
+                    <a href="tel:+380443000062">+38 (044) 300-00-62</a>
+                    <a href="tel:+380443000062">+38 (044) 300-00-62</a>
+                  </p>
+                </div>
+              </li>
+
+              <li class="contacts__col">
+                <div class="contact-card">
+                  <span class="contact-card__icon  contact-card__icon--mailbox" aria-hidden="true"></span>
+                  <p class="contact-card__content">
+                    <a href="mailto:okinetcom@gmail.com">okinetcom@gmail.com</a>
+                  </p>
+                </div>
+              </li>
+
+            </ul>
+
+            <div class="row  contacts__form-wrapper">
+
+              <div class="contacts__col-inner">
+                <div class="contacts__map">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7185.752215590514!2d30.439768001088012!3d50.44953685070974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc24301c1cf9%3A0x7cce108e9a6f28da!2zMTFBLCDQstGD0LvQuNGG0Y8g0JzQuNGF0LDQudC70LAg0JHRgNCw0LnRh9C10LLRgdGM0LrQvtCz0L4sIDEx0JAsINCa0LjQtdCyLCAwMjAwMA!5e0!3m2!1sru!2sua!4v1727358389250!5m2!1sru!2sua" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+
+              <div class="contacts__col-inner">
+                @@include('blocks/contact-form/contact-form.html')
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  <!-- Modals -->
+  @@include('blocks/mob-menu/mob-menu.html')
+  @@include('blocks/call-me-modal/call-me-modal.html')
+  @@include('blocks/connect-modal/connect-modal.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

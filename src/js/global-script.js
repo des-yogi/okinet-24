@@ -86,7 +86,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
   Array.prototype.forEach.call(phoneElems, function (item) {
     const phoneMask = IMask(
       item, {
-        mask: '+{38} (\\000) 000 00 00',
+        mask: '+{38\\0} (00) 000 00 00',
         lazy: false // make placeholder always visible
     });
   });

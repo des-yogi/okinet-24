@@ -1,0 +1,40 @@
+<!--DEV
+@ @include('blocks/product-card/product-card.html', {
+  "title": "TP-Link EC220-G5",
+  "img": "prod-card-img",
+  "descr": "Високошвидкісний дводіапазонний Wi-Fi для кращого з'єднання Неймовірна швидкість бездротового зв'язку",
+  "priceOld": "",
+  "priceNew": "900"
+})
+-->
+
+<article class="product-card">
+  <div class="product-card__top">
+    <div class="embed-responsive embed-responsive--1-1  product-card__img">
+      <picture>
+        <source srcset="img/@@img.webp, img/@@img.webp 2x" type="image/webp">
+        <source srcset="img/@@img.webp, img/@@img.webp 2x">
+          <!-- 150x150, 300x300 2x -->
+        <img src="img/@@img.jpg" alt="Alt" width="300" height="300" loading="lazy">
+      </picture>
+    </div>
+  </div>
+
+  <div class="product-card__text">
+    <div class="product-card__header">
+      <h3 class="h4  product-card__title">
+        <a href="#">@@title</a>
+      </h3>
+      <p class="product-card__descr">@@descr</p>
+    </div>
+    <div class="product-card__footer">
+      <p class="h3  product-card__price">
+        <span class="product-card__price-old">@@priceOld</span>
+        <span class="product-card__price-new">@@priceNew грн</span>
+      </p>
+      <button class="btn  btn--primary-pale  product-card__order-btn">
+        <span>Замовити</span>
+      </button>
+    </div>
+  </div>
+</article>

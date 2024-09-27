@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Продукт</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас вимкнено JavaScript. Приносимо наші вибачення, але це ускладнює використання цього сайту.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+      <main class="main">
+
+        <article class="container  product">
+
+          <div class="row  product__row">
+
+            <div class="product__col">
+              @@include('blocks/product-slider/product-slider.html')
+            </div>
+
+            <div class="product__col">
+              <div class="product__text">
+                <h1 class="product__title">TP-Link EC220-G5</h1>
+
+                <ul class="list-nostyled  product__opt-list">
+                  <li class="product__opt-item">Частота роботи Wi-Fi: 2.4 ГГц, 5 ГГц</li>
+                  <li class="product__opt-item">Швидкість WAN: 100 Мбіт/сек</li>
+                  <li class="product__opt-item">Кількість LAN-портів: 3</li>
+                  <li class="product__opt-item">Блок живлення: 12В/1А</li>
+                </ul>
+
+                <div>
+                  <p>Air Mouse G20s — це бездротова гіроскопічна мишка/пульт з мікрофоном, призначена для максимальної зручності управління Smart TV, Android TV медіаплеєром, будь-якої TV приставки з графічним інтерфейсом, персональним комп'ютером та іншими пристроями. Завдяки унікальній комбінації гіроскопічної миші та голосового управління, цей пульт дозволяє вам легко переміщатися в меню, гортати сторінки в браузері, вводити текст, перемикати канали та регулювати гучність.</p>
+                  <p>Управління Air Mouse G20s схоже на традиційний пульт, але з важливими відмінностями. Гіроскоп дозволяє вам керувати курсором на екрані шляхом легких рухів в повітрі з пультом. Це робить процес навігації надзвичайно зручним та інтуїтивно зрозумілим.</p>
+                  <p>Окрім того, вбудований мікрофон дозволяє вам використовувати голосове введення для набору тексту чи керування пристроєм. Просто продиктуйте потрібний запит, і пульт автоматично конвертує вашу мову в текст, реалізуючи швидкий та зручний спосіб введення.</p>
+                  <p>З Air Mouse G20s вам не потрібно витрачати час на складні налаштування. Просто вставте USB-приймач в пристрій, і ваш пульт готовий до використання. Насолоджуйтеся простотою та ефективністю управління вашими пристроями з Air Mouse G20s.</p>
+                </div>
+
+                <div class="product__price-wrapper">
+                  <p class="h2  product__price">
+                    Ціна:
+                    <span class="product__price-old">1100</span>
+                    <span class="product__price-new" style="color:#8c00fb;">999 грн</span>
+                  </p>
+
+                  <button class="btn  btn--primary  product__order-btn">
+                    <span>Замовити</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <section>
+            <h2 class="visually-hidden">Опції товару та додаткові послуги</h2>
+
+            <div class="product__options-wrapper">
+              @@include('blocks/product-option/product-option.html', {
+                "title": "Схема підключення пристроїв до TP-Link EC220-G5"
+              })
+
+              @@include('blocks/product-option/product-option.html', {
+                "title": "Комплектація TP-Link EC220-G5 "
+              })
+
+              @@include('blocks/product-option/product-option.html', {
+                "title": "Схема підключення пристроїв до TP-Link EC220-G5"
+              })
+            </div>
+          </section>
+
+          @@include('blocks/video/video.html')
+
+          <aside class="products-other">
+
+            <div class="products-other__header">
+              <h2 class="products-other__title">Схожі товари</h2>
+            </div>
+
+            <div class="row products-other__row">
+
+              <div class="products-other__col">
+                @@include('blocks/product-card/product-card.html', {
+                  "title": "TP-Link EC220-G5",
+                  "img": "prod-card-img",
+                  "descr": "Високошвидкісний дводіапазонний Wi-Fi для кращого з'єднання Неймовірна швидкість бездротового зв'язку",
+                  "priceOld": "",
+                  "priceNew": "900"
+                })
+              </div>
+
+              <div class="products-other__col">
+                @@include('blocks/product-card/product-card.html', {
+                  "title": "TP-Link EC1220-G7",
+                  "img": "prod-card-img",
+                  "descr": "Супервисокошвидкісний дводіапазонний Wi-Fi",
+                  "priceOld": "7000",
+                  "priceNew": "4500"
+                })
+              </div>
+
+              <div class="products-other__col">
+                @@include('blocks/product-card/product-card.html', {
+                  "title": "Apple Smart Keyboard - iPad (8th/7th Generation)",
+                  "img": "prod-card-img",
+                  "descr": "Високошвидкісний дводіапазонний Wi-Fi для кращого з'єднання Неймовірна швидкість бездротового зв'язку",
+                  "priceOld": "",
+                  "priceNew": "1900"
+                })
+              </div>
+
+            </div>
+
+          </aside>
+
+        </article>
+
+        @@include('blocks/faq/faq.html')
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  <!-- Modals -->
+  @@include('blocks/mob-menu/mob-menu.html')
+  @@include('blocks/call-me-modal/call-me-modal.html')
+  @@include('blocks/connect-modal/connect-modal.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

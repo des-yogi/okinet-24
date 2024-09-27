@@ -56,7 +56,16 @@
     "countdown-block": [],
     "share-modal": [],
     "sp-offer-other": [],
-    "link-block": []
+    "link-block": [],
+    "contacts": [],
+    "contact-card": [],
+    "contact-form": [],
+    "product": [],
+    "product-slider": [],
+    "product-option": [],
+    "video": [],
+    "products-other": [],
+    "product-card": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

@@ -1,0 +1,51 @@
+.contact-card {
+  padding: 24px;
+  background: linear-gradient(180deg, #F5F5F5 0%, rgba(245, 245, 245, 0) 100%);
+  border-radius: $border-radius--24;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 16px;
+    background-size: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &--user {
+      background-image: svg-load('../blocks/sprite-svg/svg/user.svg', fill=$main-color);
+    }
+
+    &--clock {
+      background-image: svg-load('../blocks/sprite-svg/svg/clock.svg', fill=$main-color);
+    }
+
+    &--phone {
+      background-image: svg-load('../blocks/sprite-svg/svg/phone-call.svg', fill=$main-color);
+    }
+
+    &--mailbox {
+      background-image: svg-load('../blocks/sprite-svg/svg/mail-box.svg', fill=$main-color);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    //gap: 2px 0;
+    margin: 0;
+    line-height: 1.8;
+    hyphens: none;
+
+    a {
+      display: inline-flex;
+      padding: 4px 0;
+    }
+  }
+}
+
