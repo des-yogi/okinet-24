@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Магазин</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас вимкнено JavaScript. Приносимо наші вибачення, але це ускладнює використання цього сайту.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+      <main class="main">
+
+        <div class="container  products-other  shop" style="margin-top: 0;">
+
+          <div class="products-other__header">
+            <h1 class="products-other__title">Магазин</h1>
+          </div>
+
+          <div class="row products-other__row">
+
+            <div class="products-other__col">
+              @@include('blocks/product-card/product-card.html', {
+                "title": "TP-Link EC1220-G7",
+                "label": "Акція",
+                "img": "prod-card-img",
+                "descr": "Супервисокошвидкісний дводіапазонний Wi-Fi",
+                "priceOld": "7000",
+                "priceNew": "4500"
+              })
+            </div>
+
+            <div class="products-other__col">
+              @@include('blocks/product-card/product-card.html', {
+                "title": "TP-Link EC220-G5",
+                "label": "",
+                "img": "prod-card-img",
+                "descr": "Високошвидкісний дводіапазонний Wi-Fi для кращого з'єднання Неймовірна швидкість бездротового зв'язку",
+                "priceOld": "",
+                "priceNew": "900"
+              })
+            </div>
+
+            <div class="products-other__col">
+              @@include('blocks/product-card/product-card.html', {
+                "title": "Apple Smart Keyboard - iPad (8th/7th Generation)",
+                "label": "",
+                "img": "prod-card-img",
+                "descr": "Високошвидкісний дводіапазонний Wi-Fi для кращого з'єднання Неймовірна швидкість бездротового зв'язку",
+                "priceOld": "",
+                "priceNew": "1900"
+              })
+            </div>
+
+            <div class="products-other__col">
+              @@include('blocks/product-card/product-card.html', {
+                "title": "TP-Link EC220-G5",
+                "label": "",
+                "img": "prod-card-img",
+                "descr": "Високошвидкісний дводіапазонний Wi-Fi для кращого з'єднання Неймовірна швидкість бездротового зв'язку",
+                "priceOld": "",
+                "priceNew": "900"
+              })
+            </div>
+
+            <div class="products-other__col">
+              @@include('blocks/product-card/product-card.html', {
+                "title": "TP-Link EC1220-G7",
+                "label": "Акція",
+                "img": "prod-card-img",
+                "descr": "Супервисокошвидкісний дводіапазонний Wi-Fi",
+                "priceOld": "7000",
+                "priceNew": "4500"
+              })
+            </div>
+
+            <div class="products-other__col">
+              @@include('blocks/product-card/product-card.html', {
+                "title": "Apple Smart Keyboard - iPad (8th/7th Generation)",
+                "label": "",
+                "img": "prod-card-img",
+                "descr": "Високошвидкісний дводіапазонний Wi-Fi для кращого з'єднання Неймовірна швидкість бездротового зв'язку",
+                "priceOld": "",
+                "priceNew": "1900"
+              })
+            </div>
+
+            <div class="products-other__col">
+              @@include('blocks/product-card/product-card.html', {
+                "title": "TP-Link EC1220-G7",
+                "label": "Акція",
+                "img": "prod-card-img",
+                "descr": "Супервисокошвидкісний дводіапазонний Wi-Fi",
+                "priceOld": "7000",
+                "priceNew": "4500"
+              })
+            </div>
+
+            <div class="products-other__col">
+              @@include('blocks/product-card/product-card.html', {
+                "title": "TP-Link EC220-G5",
+                "label": "",
+                "img": "prod-card-img",
+                "descr": "Високошвидкісний дводіапазонний Wi-Fi для кращого з'єднання Неймовірна швидкість бездротового зв'язку",
+                "priceOld": "",
+                "priceNew": "900"
+              })
+            </div>
+
+          </div>
+
+        </div>
+
+        @@include('blocks/about-block/about-block.html')
+
+        @@include('blocks/faq/faq.html')
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  <!-- Modals -->
+  @@include('blocks/mob-menu/mob-menu.html')
+  @@include('blocks/call-me-modal/call-me-modal.html')
+  @@include('blocks/connect-modal/connect-modal.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

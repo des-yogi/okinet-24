@@ -1,0 +1,38 @@
+.customer-doc {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    gap: 40px 0;
+  }
+
+  &__col {
+    @include col(xs, 12);
+    //@include col(md, 6);
+    @include col(xl, 6);
+
+    &--text {
+
+      h2, h3, h4, h5, h6 {
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &__download {
+    padding: 24px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius--24;
+
+    h3 {
+      margin-top: 0;
+    }
+  }
+
+  &__download-link {
+    padding: 8px 0;
+  }
+}

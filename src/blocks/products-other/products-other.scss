@@ -23,4 +23,14 @@
     @include col(md, 6);
     @include col(lg, 4);
   }
+
+  &.shop {
+
+    #{$block-name}__row {
+
+      @media (min-width: $screen-md) {
+        gap: 40px 0;
+      }
+    }
+  }
 }

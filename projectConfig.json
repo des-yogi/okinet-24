@@ -65,7 +65,13 @@
     "product-option": [],
     "video": [],
     "products-other": [],
-    "product-card": []
+    "product-card": [],
+    "shop": [],
+    "vacancy": [],
+    "customers": [],
+    "customer-doc": [],
+    "customer-payment": [],
+    "speed-test": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
