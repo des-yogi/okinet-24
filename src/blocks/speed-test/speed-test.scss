@@ -1,0 +1,97 @@
+.speed-test {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    padding: 24px;
+    margin: 0 0 24px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius--24;
+  }
+
+  &__row {
+    gap: 16px 0;
+  }
+
+  &__col {
+    @include col(xs, 12);
+    //@include col(md, 6);
+    @include col(xl, 4);
+
+    .h4 {
+      margin: 0 0 8px;
+    }
+  }
+
+  &__unit,
+  &__unit-wide {
+    padding: 24px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius--24;
+    background-color: $block-bg;
+  }
+
+  &__unit {
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__col-wide {
+    @include col(xs, 12);
+
+    @media (max-width: $screen-xl - 1) {
+      margin-top: 24px;
+    }
+  }
+
+  &__unit-wide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px 16px;
+    overflow: hidden;
+
+    @media (min-width: $screen-md) {
+      flex-direction: initial;
+      justify-content: space-evenly;
+    }
+  }
+
+  &__unit-text {
+    position: relative;
+    z-index: 1;
+    max-width: 270px;
+
+    @media (max-width: $screen-md - 1) {
+      text-align: center;
+    }
+
+    p {
+      margin: 0 0 40px;
+      hyphens: none;
+    }
+  }
+
+  &__unit-title {
+    margin: 0 0 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  &__unit-img {
+    max-width: 275px;
+    filter: drop-shadow(-154px 171px 64px rgba(86, 100, 159, 0.01))
+            drop-shadow(-99px 109px 59px rgba(86, 100, 159, 0.06))
+            drop-shadow(-56px 61px 50px rgba(86, 100, 159, 0.19))
+            drop-shadow(-25px 27px 37px rgba(86, 100, 159, 0.32))
+            drop-shadow(-6px 7px 20px rgba(86, 100, 159, 0.37));
+
+    @media (min-width: $screen-xl) {
+      max-width: 350px;
+    }
+  }
+}
+

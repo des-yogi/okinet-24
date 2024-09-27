@@ -1,6 +1,7 @@
 <!--DEV
 @ @include('blocks/product-card/product-card.html', {
   "title": "TP-Link EC220-G5",
+  "label": "Акція",
   "img": "prod-card-img",
   "descr": "Високошвидкісний дводіапазонний Wi-Fi для кращого з'єднання Неймовірна швидкість бездротового зв'язку",
   "priceOld": "",
@@ -10,6 +11,8 @@
 
 <article class="product-card">
   <div class="product-card__top">
+    <span class="product-card__label" style="color:#fff; background-color:#8c00fb;">@@label</span>
+
     <div class="embed-responsive embed-responsive--1-1  product-card__img">
       <picture>
         <source srcset="img/@@img.webp, img/@@img.webp 2x" type="image/webp">

@@ -1,0 +1,102 @@
+.customer-payment {
+  margin: 72px 0;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    padding: 24px;
+    margin: 0 0 24px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius--24;
+  }
+
+  &__row {
+    gap: 40px 0;
+  }
+
+  &__col {
+    @include col(xs, 12);
+    //@include col(md, 6);
+    @include col(xl, 6);
+
+    &--text {
+
+      h2, h3, h4, h5, h6 {
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &__credentials-cap {
+    margin-top: 0;
+  }
+
+  &__warning {
+    color: $main-color;
+  }
+
+  table {
+    table-collapse: collapse;
+
+    tr {
+
+      &:not(:first-child) {
+
+        th,
+        td {
+          padding: 6.5px 0;
+        }
+      }
+    }
+
+    .attr {
+      width: 100px;
+    }
+  }
+
+  &__methods {
+    display: flex;
+    flex-wrap: wrap;
+    //justify-content: space-between;
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  &__methods-item {
+    flex: 0 0 155px;
+
+    @media (min-width: $screen-xl) {
+      flex-basis: 180px;
+    }
+  }
+
+  &__methods-link {
+    font-size: $font-size-sm;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+
+    p {
+      margin: 8px 0 0 3px;
+    }
+  }
+
+  &__img {
+    //width: 155px;
+    //height: 116px;
+    background-color: $gray-lightest;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

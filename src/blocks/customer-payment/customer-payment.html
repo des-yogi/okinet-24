@@ -1,0 +1,108 @@
+<!--DEV
+@ @include('blocks/customer-payment/customer-payment.html')
+-->
+
+<section class="container  customer-payment">
+  <h2 class="customer-payment__title">Способи оплати</h2>
+
+  <div class="row  customer-payment__row">
+
+    <div class="customer-payment__col  customer-payment__col--text">
+      <h3>Провайдер інтернету OKINET</h3>
+      <p>OKINET – відомий інтернет-провайдер у Києві, що надає послуги мешканцям міста. Завдяки розгалуженій інфраструктурі, компанія покриває значну частину столиці. Підключення до Інтернету здійснюється з використанням передових технологій та обладнання провідних виробників. Великий досвід роботи та ефективна організація процесів дозволяють швидко здійснювати підключення та оперативно вирішувати будь-які проблеми.</p>
+    </div>
+
+    <div class="customer-payment__col">
+      <div class="customer-payment__credentials">
+        <h3 class="customer-payment__credentials-cap">Реквізити для оплати</h3>
+
+        <table>
+          <colgroup>
+            <col class="attr">
+            <col>
+          </colgroup>
+
+          <tbody>
+            <tr>
+              <th>ЕДРПОУ:</th>
+              <td>3257320739</td>
+            </tr>
+            <tr>
+              <th>р/р:</th>
+              <td>UA703052990000026000026210963</td>
+            </tr>
+            <tr>
+              <th>Банк:</th>
+              <td>відділення “Березняки” Печерського філіалу “ПриватБанку</td>
+            </tr>
+            <tr>
+              <th>МФО:</th>
+              <td>300711</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="customer-payment__warning">УВАГА! Не забувайте вказувати № договору та ПІБ, на кого він оформлений.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <ul class="list-nostyled  customer-payment__methods">
+
+    <li class="customer-payment__methods-item">
+      <a href="#" class="customer-payment__methods-link">
+        <div class="embed-responsive embed-responsive--4-3  customer-payment__img">
+          <picture>
+            <source srcset="img/monobank-logo.webp,
+                            img/monobank-logo.webp 2x"
+                    type="inage/webp">
+            <!-- 155x116, 310x232 2x -->
+            <img src="img/monobank-logo.jpg"
+                 srcset="img/monobank-logo.jpg,
+                         img/monobank-logo.jpg 2x"
+                 alt="Alt" width="310" height="232" loading="lazy">
+          </picture>
+        </div>
+        <p>Моно</p>
+      </a>
+    </li>
+
+    <li class="customer-payment__methods-item">
+      <a href="#" class="customer-payment__methods-link">
+        <div class="embed-responsive embed-responsive--4-3  customer-payment__img">
+          <picture>
+            <source srcset="img/portmone-logo.webp,
+                            img/portmone-logo.webp 2x"
+                    type="inage/webp">
+            <!-- 155x116, 310x232 2x -->
+            <img src="img/portmone-logo.jpg"
+                 srcset="img/portmone-logo.jpg,
+                         img/portmone-logo.jpg 2x"
+                 alt="Alt" width="310" height="232" loading="lazy">
+          </picture>
+        </div>
+        <p>Портмоне</p>
+      </a>
+    </li>
+
+    <li class="customer-payment__methods-item">
+      <a href="#" class="customer-payment__methods-link">
+        <div class="embed-responsive embed-responsive--4-3  customer-payment__img">
+          <picture>
+            <source srcset="img/privat-24-logo.webp,
+                            img/privat-24-logo.webp 2x"
+                    type="inage/webp">
+            <!-- 155x116, 310x232 2x -->
+            <img src="img/privat-24-logo.jpg"
+                 srcset="img/privat-24-logo.jpg,
+                         img/privat-24-logo.jpg 2x"
+                 alt="Alt" width="310" height="232" loading="lazy">
+          </picture>
+        </div>
+        <p>ПриватБанк</p>
+      </a>
+    </li>
+
+  </ul>
+</section>

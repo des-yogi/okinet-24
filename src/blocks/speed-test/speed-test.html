@@ -1,0 +1,57 @@
+<!--DEV
+@ @include('blocks/speed-test/speed-test.html')
+-->
+
+<section class="container  speed-test">
+  <h2 class="speed-test__title">Тестування швидкості</h2>
+
+  <div class="row  speed-test__row">
+
+    <div class="speed-test__col">
+      <div class="speed-test__unit">
+        <p class="h4">Підготовка до тестування</p>
+        <p>Щоб отримати коректні результати потрібно завершити активні задачі на пристрої з якого здійснюватиметься тестування: зупинити завантаження файлів, вимкнути музику тощо.</p>
+      </div>
+    </div>
+
+    <div class="speed-test__col">
+      <div class="speed-test__unit">
+        <p class="h4">Дротове тестування</p>
+        <p>Важливо проводити тестування підключивши інтернет-кабель напряму до ПК. Навіть при дротовому з'єднанні від WiFi роутера будуть втрати швидкості через додаткову ланку у з'єднанні.</p>
+      </div>
+    </div>
+
+    <div class="speed-test__col">
+      <div class="speed-test__unit">
+        <p class="h4">Бездротове тестування</p>
+        <p>Якщо немає можливості перевірити швидкість дротовим з'єднанням - відключіть від WiFi мережі усі пристрої, окрім того з якого здійснюватиметься тестування швидкості.</p>
+      </div>
+    </div>
+
+    <div class="speed-test__col-wide">
+      <div class="speed-test__unit-wide">
+
+        <div class="speed-test__unit-text">
+          <h3 class="h2  speed-test__unit-title">Speedtest</h3>
+          <p>Перевір свою швидкість за допомогою SPEED TEST</p>
+          <a href="#" class="btn btn--primary-pale" target="_blank" rel="nofollow noopener">
+            <span>Перейти до перевірки</span>
+          </a>
+        </div>
+
+        <div class="speed-test__unit-img">
+          <picture>
+            <source srcset="img/speed-tester@1x.webp,
+                            img/speed-tester@2x.webp 2x"
+                    type="image/webp">
+
+            <img src="img/speed-tester@2x.png"
+                 srcset="img/speed-tester@1x.png, img/speed-tester@2x.png 2x"
+                 alt="" width="492" height="505" loading="lazy">
+          </picture>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
