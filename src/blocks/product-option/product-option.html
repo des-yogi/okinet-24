@@ -1,0 +1,51 @@
+<!--DEV
+@ @include('blocks/product-option/product-option.html', {
+  "title": "Схема підключення пристроїв до TP-Link EC220-G5"
+})
+-->
+
+<article class="product-option">
+  <div class="product-option__header">
+    <h3 class="h2  product-option__title">@@title</h3>
+  </div>
+
+  <div class="row  product-option__row">
+
+    <div class="product-option__col  product-option__col--img">
+      <div class="embed-responsive embed-responsive--4-3  product-option__img">
+        <picture>
+          <source srcset="img/product-option.webp 525w,
+                          img/product-option.webp 600w,
+                          img/product-option.webp 700w,
+                          img/product-option.webp 800w,
+                          img/product-option.webp 1100w,
+                          img/product-option.webp 1200w,
+                          img/product-option.webp 1400w"
+                  sizes="(max-width: 1023px) 95vw,
+                         (max-width: 1279px) 46vw, 590px"
+                  type="image/webp">
+
+          <source srcset="img/product-option.jpg 525w,
+                          img/product-option.jpg 600w,
+                          img/product-option.jpg 700w,
+                          img/product-option.jpg 800w,
+                          img/product-option.jpg 1100w,
+                          img/product-option.jpg 1200w,
+                          img/product-option.jpg 1400w"
+                  sizes="(max-width: 1023px) 95vw,
+                         (max-width: 1279px) 46vw, 590px">
+
+          <img src="img/product-option.jpg" alt="Alt" width="1400" height="1050" loading="lazy">
+        </picture>
+      </div>
+    </div>
+
+    <div class="product-option__col  product-option__col--text">
+      <div class="product-option__text">
+        <h4>Провайдер інтернету OKINET</h4>
+        <p>OKINET – відомий інтернет-провайдер у Києві, що надає послуги мешканцям міста. Завдяки розгалуженій інфраструктурі, компанія покриває значну частину столиці. Підключення до Інтернету здійснюється з використанням передових технологій та обладнання провідних виробників. Великий досвід роботи та ефективна організація процесів дозволяють швидко здійснювати підключення та оперативно вирішувати будь-які проблеми.</p>
+      </div>
+    </div>
+
+  </div>
+</article>

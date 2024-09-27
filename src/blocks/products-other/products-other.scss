@@ -1,0 +1,26 @@
+.products-other {
+  margin-top: 72px;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    padding: 24px;
+    margin-bottom: 24px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius--24;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__row {
+    gap: 24px 0;
+  }
+
+  &__col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(lg, 4);
+  }
+}

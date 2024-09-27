@@ -1,0 +1,29 @@
+.contact-form {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__input-wrapper {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      align-items: flex-start;
+      gap: 0 16px;
+
+      .field-text {
+        flex: 1 0;
+        flex-basis: calc(50% - 8px);
+      }
+    }
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px 0;
+  }
+}

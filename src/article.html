@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Стаття / Text</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас вимкнено JavaScript. Приносимо наші вибачення, але це ускладнює використання цього сайту.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+      <main class="main">
+
+        <article class="container  sp-offer-article">
+          <div class="row  sp-offer-article__row">
+
+            <div class="sp-offer-article__col-main">
+              <div class="embed-responsive  sp-offer-article__img">
+                <picture>
+                  <source srcset="img/net-grid.webp 525w,
+                                  img/net-grid.webp 600w,
+                                  img/net-grid.webp 620w,
+                                  img/net-grid.webp 700w,
+                                  img/net-grid.webp 800w,
+                                  img/net-grid.webp 1050w,
+                                  img/net-grid.webp 1200w,
+                                  img/net-grid.webp 1400w,
+                                  img/net-grid.webp 1680w"
+                          sizes="(max-width: 1279px) 95vw, 795px"
+                          type="image/webp">
+
+                  <source srcset="img/net-grid.jpg 525w,
+                                  img/net-grid.jpg 600w,
+                                  img/net-grid.jpg 620w,
+                                  img/net-grid.jpg 700w,
+                                  img/net-grid.jpg 800w,
+                                  img/net-grid.jpg 1050w,
+                                  img/net-grid.jpg 1200w,
+                                  img/net-grid.jpg 1400w,
+                                  img/net-grid.jpg 1680w"
+                          sizes="(max-width: 1279px) 95vw, 795px">
+
+                  <img src="img/net-grid.png" width="1200" height="675" alt="Alt">
+                </picture>
+              </div>
+
+              <div class="sp-offer-article__text">
+                <time class="publishedon" datetime="2024-10-23">23.10.2024</time>
+
+                <h1 class="sp-offer-article__title">Встигніть підключити FIBER 1G</h1>
+                <p class="sp-offer-article__intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus id aliquet convallis diam dictum euismod sed. Diam dignissim tincidunt amet, sapien, tincidunt aliquam elementum arcu. </p>
+
+                <div>
+                  <p>Підключення відбувається безкоштовно, на цю акцію не поширюється інші пропозиції.</p>
+                  <p>Акція діє для нових абонентів мережі OKINET, які внесли аванс за 12 місяців у розмірі 900 грн з моменту підключення тарифного пакету.</p>
+                  <p>Умови акції не розповсюджується на абонентів, які були користувачами послуг мережі OKINET за місцем їх надання протягом останніх 3-х календарних місяців.</p>
+
+                  <h2>H2</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus id aliquet convallis diam dictum euismod sed. Diam dignissim tincidunt amet, sapien, tincidunt aliquam elementum arcu. Id odio nunc consectetur pellentesque. Malesuada consequat sagittis, eu quis interdum maecenas sit.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus id aliquet convallis diam dictum euismod sed. Diam dignissim tincidunt amet, sapien, tincidunt aliquam elementum arcu. Id odio nunc consectetur pellentesque. Malesuada consequat sagittis, eu quis interdum maecenas sit.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="sp-offer-article__col-aside">
+              <div class="sp-offer-article__aside">
+
+                @@include('blocks/sp-offer-other/sp-offer-other.html', {
+                  "blockTitle": "Інші новини",
+                  "btnText": "Всі новини"
+                })
+
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        @@include('blocks/faq/faq.html')
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  <!-- Modals -->
+  @@include('blocks/mob-menu/mob-menu.html')
+  @@include('blocks/call-me-modal/call-me-modal.html')
+  @@include('blocks/connect-modal/connect-modal.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

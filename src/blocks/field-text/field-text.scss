@@ -3,7 +3,7 @@
   $block-name:                &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 
   &__name {
     @include field-name;
@@ -17,12 +17,13 @@
     display: inline-block;
     vertical-align: middle;
     width: 100%;
-    // height: 2.125em;
-    padding: $field-padding-vertical  $field-padding-horizontal;
+    height: 48px;
+    padding: 0 12px;
     margin: 0;
     line-height: $line-height;
-    font-size: 1em;
+    font-size: 16px;
     font-family: inherit;
+    color: $text-muted;
     background-color: #fff;
     border: 1px solid $border-color;
     border-radius: $border-radius;
@@ -32,10 +33,14 @@
       @include field-focus;
     }
 
+    &:invalid {
+      border-color: $color-danger;
+    }
+
     &[disabled],
     &[readonly] {
       cursor: default;
-      background-color: $gray-lighter;
+      background-color: $disabled-bg;
     }
 
     &[type='search']::-webkit-search-cancel-button,

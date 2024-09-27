@@ -358,6 +358,15 @@ a {
   color: $text-muted;
 }
 
+.asterisk {
+  display: inline-flex;
+  padding: 0 2px;
+  transform: translateY(1px);
+  font-size: $font-size;
+  line-height: 1;
+  color: $main-color;
+}
+
 // background-image: svg-load('../blocks/block-name/bg-img/phone.svg', fill=$main-color);
 // background-image: svg-load('../blocks/sprite-svg/svg/phone.svg', fill=$main-color);
 
