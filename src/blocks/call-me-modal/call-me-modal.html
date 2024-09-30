@@ -3,18 +3,28 @@
 -->
 
 <div class="call-me-modal  modal fade" id="callMeModal" tabindex="-1" aria-labelledby="callMeModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title fs-5" id="callMeModalLabel">Введіть ваш номер</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <div class="modal-dialog modal-dialog-centered  call-me-modal__dialog">
+    <div class="modal-content  call-me-modal__content">
+      <div class="modal-header  call-me-modal__header">
+        <h5 class="modal-title  call-me-modal__title" id="callMeModalLabel">Зателефонуйте мені</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Закрити">
+          <span></span>
+        </button>
       </div>
-      <div class="modal-body">
-        ...Content
+      <div class="modal-body  call-me-modal__body">
+        <form id="callMe" action="#" method="post">
+          <label class="field-text" style="margin-bottom: 0;">
+            <!-- <span class="field-text__name">Текст</span> -->
+            <span class="field-text__input-wrap">
+              <input class="field-text__input  phone-mask" type="text" name="tel" value="">
+              <!-- <span class="field-text__help-text" data-error="tel">Пояснение</span> -->
+            </span>
+          </label>
+        </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+      <div class="modal-footer  call-me-modal__footer">
+        <button form="callMe" class="btn btn--primary" type="submit">Надіслати</button>
+        <p class="agreement-text">Натискаючи на кнопку, Ви погоджуєтесь з <a href="#">обробкою персональних даних</a></p>
       </div>
     </div>
   </div>

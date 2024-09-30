@@ -20,11 +20,18 @@
 
   &__col {
     @include col(xs, 12);
-    @include col(xl, 6);
 
     @media (min-width: $screen-xl) {
       display: flex;
       align-items: center;
+    }
+
+    &--title {
+      @include col(xl, 7);
+    }
+
+    &--nav {
+      @include col(xl, 5);
     }
   }
 
@@ -89,9 +96,14 @@
     &:hover,
     &:focus,
     &.active {
+      text-decoration: none;
       color: $white !important;
       background-color: $secondary-color !important;
       box-shadow: 0 52px 21px rgba(0, 173, 29, 0.01), 0 29px 18px rgba(0, 173, 29, 0.05), 0 13px 13px rgba(0, 173, 29, 0.09), 0 3px 7px rgba(0, 173, 29, 0.1);
+    }
+
+    &.active {
+      pointer-events: none;
     }
 
     @media (max-width: $screen-md - 1) {

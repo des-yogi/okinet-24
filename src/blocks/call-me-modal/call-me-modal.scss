@@ -1,9 +1,52 @@
-// В этом файле должны быть стили для БЭМ-блока call-me-modal, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .call-me-modal {
 
   $block-name:                &; // #{$block-name}__element
 
+  &__dialog {
+    max-width: 300px !important;
+    margin: auto;
+  }
+
+  &__content {
+    border-radius: $border-radius--24;
+    overflow: hidden;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 0 16px;
+    border-bottom: none;
+    padding-bottom: 20px;
+
+    .close {
+      flex: 0 0 48px;
+    }
+  }
+
+  &__title {
+    flex: 1 1 auto;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__body {
+    padding: 0 16px;
+    //padding-bottom: 12px;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding-top: 24px;
+    text-align: center;
+    border-top: none;
+
+    p {
+      font-size: $font-size-sm;
+      hyphens: none;
+    }
+  }
 }

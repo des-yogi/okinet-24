@@ -1,9 +1,34 @@
-// В этом файле должны быть стили для БЭМ-блока share-modal, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .share-modal {
 
   $block-name:                &; // #{$block-name}__element
 
+  &__content {
+    border-radius: $border-radius--24;
+    overflow: hidden;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 0 16px;
+    border-bottom: none;
+    padding-bottom: 20px;
+
+    .close {
+      flex: 0 0 48px;
+    }
+  }
+
+  &__title {
+    flex: 1 1 auto;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //justify-content: center;
+  }
 }

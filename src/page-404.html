@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Тарифи</title>
+  <title>Сторінку не знайдено</title>
   @@include('_include/page_head.html')
 </head>
 
@@ -15,20 +15,22 @@
     <div class="page__content">
       @@include('blocks/page-header/page-header.html')
 
-      @@include('blocks/breadcrumbs/breadcrumbs.html')
-
       <main class="main">
 
-          @@include('blocks/tariffs-slider/tariffs-slider.html', {
-            "titleTag": "h1",
-            "mt0": "margin-top:0;"
-          })
+        <div class="container  error-404">
+          <div class="error-404__inner">
+            <picture>
+              <source srcset="img/error-404.webp, img/error-404.webp 2x" type="image/webp">
+              <img src="img/error-404.png" srcset="img/error-404.png, img/error-404.png 2x" alt="" width="350" height="352" style="margin-bottom: 45px;">
+            </picture>
 
-          @@include('blocks/free-options/free-options.html')
-
-          @@include('blocks/about-block/about-block.html')
-
-          @@include('blocks/faq/faq.html')
+            <h1 class="error-404__title">Сторінку не знайдено</h1>
+            <p style="margin-bottom: 45px;">Але не здавайтесь у ваших пошуках…</p>
+            <a href="index.html" class="btn btn--primary">
+              <span>Повернутися на головну</span>
+            </a>
+          </div>
+        </div>
 
       </main>
 

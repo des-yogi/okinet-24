@@ -3,18 +3,60 @@
 -->
 
 <div class="connect-modal  modal fade" id="connectMeModal" tabindex="-1" aria-labelledby="connectMeModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title fs-5" id="connectMeModalLabel">Підключитися</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered  connect-modal__dialog">
+    <div class="modal-content  connect-modal__content">
+      <div class="modal-header  connect-modal__header">
+        <h5 class="modal-title  connect-modal__title" id="connectMeModalLabel">Підключитися</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Закрити">
+          <span></span>
+        </button>
       </div>
-      <div class="modal-body">
-        ...Content
+      <div class="modal-body  call-me-modal__body">
+        <p class="connect-modal__info">Заповніть форму для подачі заявки. Ми зв’яжимось з вами у найблищий час.</p>
+        <p class="connect-modal__warning">(<span class="asterisk">*</span>) Ці поля обов’язкові для заповнення</p>
+        <form id="orderForm" action="#" method="post">
+
+          <label class="field-text" style="margin-bottom: 16px;">
+            <span class="field-text__name">Ім’я <span class="asterisk">*</span></span>
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="text" name="name" value="">
+              <span class="field-text__help-text" data-error="name"></span>
+            </span>
+          </label>
+
+          <label class="field-text" style="margin-bottom: 16px;">
+            <span class="field-text__name">Номер телефону <span class="asterisk">*</span></span></span>
+            <span class="field-text__input-wrap">
+              <input class="field-text__input  phone-mask" type="text" name="tel" value="">
+              <span class="field-text__help-text" data-error="tel"></span>
+            </span>
+          </label>
+
+          <label class="field-text" style="margin-bottom: 16px;">
+            <span class="field-text__name">Email</span>
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="text" name="email" value="" placeholder="user@gmail.com">
+              <span class="field-text__help-text" data-error="email"></span>
+            </span>
+          </label>
+
+          <label class="field-text" style="margin-bottom: 16px;">
+            <span class="field-text__name">Ваше повідомлення</span>
+            <span class="field-text__input-wrap">
+              <textarea class="field-text__input" name="message" rows="4" placeholder="Поле для додаткової інформації"></textarea>
+              <span class="field-text__help-text" data-error="message"></span>
+            </span>
+          </label>
+
+          <div class="field-text  connect-modal__captcha" style="margin-bottom: 16px;">
+            <img src="img/reCaptcha.gif" width="304" alt="">
+          </div>
+
+        </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+      <div class="modal-footer  connect-modal__footer">
+        <button form="orderForm" class="btn btn--primary" type="submit">Надіслати</button>
+        <p class="agreement-text">Натискаючи на кнопку, Ви погоджуєтесь з <a href="#">обробкою персональних даних</a></p>
       </div>
     </div>
   </div>
