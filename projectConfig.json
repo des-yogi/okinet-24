@@ -6,12 +6,10 @@
     "close": [],
     "countdown": [],
     "embed-responsive": [],
-    "field-actions": [],
     "field-checkbox": [],
     "field-radio": [],
     "field-text": [],
     "form": [],
-    "lang-switcher": [],
     "logo": [],
     "main-nav": [],
     "modal": [],
@@ -23,7 +21,6 @@
     "sprite-svg": [],
     "table": [],
     "table-mobile-scroll": [],
-    "tabs": [],
     "to-top": [],
     "typo": [],
     "battery-btn": [],
@@ -71,7 +68,11 @@
     "customers": [],
     "customer-doc": [],
     "customer-payment": [],
-    "speed-test": []
+    "speed-test": [],
+    "history": [],
+    "error-404": [],
+    "text-doc": [],
+    "share-links": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

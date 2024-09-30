@@ -1,9 +1,57 @@
-// В этом файле должны быть стили для БЭМ-блока connect-modal, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .connect-modal {
 
   $block-name:                &; // #{$block-name}__element
 
+  &__content {
+    border-radius: $border-radius--24;
+    overflow: hidden;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 0 16px;
+    border-bottom: none;
+    padding-bottom: 20px;
+
+    .close {
+      flex: 0 0 48px;
+    }
+  }
+
+  &__title {
+    flex: 1 1 auto;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__info,
+  &__warning {
+    margin-top: 0;
+    font-size: $font-size-sm;
+  }
+
+  &__info {
+    margin-bottom: 8px;
+  }
+
+  &__captcha {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding-top: 16px;
+    text-align: center;
+    border-top: none;
+
+    p {
+      font-size: $font-size-sm;
+      hyphens: none;
+    }
+  }
 }

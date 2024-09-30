@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Про нас</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас вимкнено JavaScript. Приносимо наші вибачення, але це ускладнює використання цього сайту.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+      <main class="main">
+
+        <div class="container  he-hero">
+          <div class="he-hero__inner">
+            <div class="row  he-hero__row">
+              <div class="he-hero__col">
+                <div class="he-hero__text">
+                  <h1 class="he-hero__title">Компанія</h1>
+                  <p class="he-hero__intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, vel impedit praesentium quibusdam quisquam consequuntur, facilis blanditiis reprehenderit quidem nisi harum illum.</p>
+                  <!-- <button class="btn btn--primary  he-hero__btn">
+                    <span>Підключитись</span>
+                  </button> -->
+                </div>
+              </div>
+
+              <div class="he-hero__col">
+                <div class="embed-responsive embed-responsive--3-2  he-hero__img">
+                  <picture>
+                    <source srcset="img/he-banner.webp 450w,
+                                    img/he-banner.webp 568w,
+                                    img/he-banner.webp 620w,
+                                    img/he-banner.webp 740w,
+                                    img/he-banner.webp 980w"
+                            sizes="(max-width: 767px) 85vw,
+                                   (max-width: 1279px) 650px, 568px"
+                            type="image/webp">
+                    <source srcset="img/he-banner.jpg 450w,
+                                    img/he-banner.jpg 568w,
+                                    img/he-banner.jpg 620w,
+                                    img/he-banner.jpg 740w,
+                                    img/he-banner.jpg 980w"
+                            sizes="(max-width: 767px) 85vw,
+                                   (max-width: 1279px) 650px, 568px">
+                    <img src="img/he-banner.jpg" width="980" height="653" alt="Alt">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        @@include('blocks/customers-slider/customers-slider.html')
+
+        @@include('blocks/history/history.html')
+
+        @@include('blocks/about-block/about-block.html')
+
+        @@include('blocks/faq/faq.html')
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  <!-- Modals -->
+  @@include('blocks/mob-menu/mob-menu.html')
+  @@include('blocks/call-me-modal/call-me-modal.html')
+  @@include('blocks/connect-modal/connect-modal.html')
+
+  @@include('_include/page_bottom.html')
+
+  <script>
+    // Полифил для Intersection Observer
+    (function() {
+      if ('IntersectionObserver' in window) {
+        return; // Если поддерживается, полифил не нужен
+      }
+
+      // Реализуем простой полифил, основанный на скролле
+      window.IntersectionObserver = class IntersectionObserver {
+        constructor(callback, options = {}) {
+          this.callback = callback;
+          this.options = options;
+          this.observedElements = [];
+          this.throttleTimeout = null;
+
+          // Настраиваем стандартные значения для root, rootMargin и threshold
+          this.root = options.root || null;
+          this.rootMargin = options.rootMargin || '0px';
+          this.threshold = options.threshold || [0];
+
+          // Следим за скроллом и ресайзом
+          this.checkVisibility = this.checkVisibility.bind(this);
+          window.addEventListener('scroll', this.checkVisibility, { passive: true });
+          window.addEventListener('resize', this.checkVisibility, { passive: true });
+        }
+
+        observe(element) {
+          this.observedElements.push(element);
+          this.checkVisibility();
+        }
+
+        unobserve(element) {
+          this.observedElements = this.observedElements.filter(item => item !== element);
+        }
+
+        disconnect() {
+          this.observedElements = [];
+          window.removeEventListener('scroll', this.checkVisibility);
+          window.removeEventListener('resize', this.checkVisibility);
+        }
+
+        checkVisibility() {
+          if (this.throttleTimeout) {
+            clearTimeout(this.throttleTimeout);
+          }
+
+          this.throttleTimeout = setTimeout(() => {
+            const entries = this.observedElements.map(element => {
+              const rect = element.getBoundingClientRect();
+              const isVisible = (
+                rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.bottom > 0
+              );
+
+              return {
+                target: element,
+                isIntersecting: isVisible
+              };
+            });
+
+            this.callback(entries, this);
+          }, 100);
+        }
+      };
+    })();
+
+    (function() {
+      // Выбираем все элементы с классом .history__stage
+      const stages = document.querySelectorAll('.history__stage');
+
+      // Если массив пуст, завершаем работу скрипта
+      if (stages.length === 0) {
+        return;
+      }
+
+      // Опции для Intersection Observer
+      const options = {
+        root: null, // Область просмотра — это сам viewport
+        rootMargin: '0px 0px -35% 0px', // Отслеживаем появление на расстоянии 40% от нижней границы
+        threshold: 0 // Как только элемент появляется хотя бы на 1 пиксель
+      };
+
+      // Коллбэк для обработки элементов
+      const callback = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active'); // Добавляем класс active
+          }
+        });
+      };
+
+      // Создаем наблюдателя
+      const observer = new IntersectionObserver(callback, options);
+
+      // Добавляем наблюдателя на каждый элемент с классом .history__stage
+      stages.forEach(stage => {
+        observer.observe(stage);
+      });
+    })();
+
+  </script>
+
+</body>
+</html>

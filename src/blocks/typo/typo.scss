@@ -214,9 +214,51 @@ abbr[title] {
 }
 
 blockquote {
-  padding: 0;
+  padding: 24px;
   margin-left: 0;
   margin-right: 0;
+  background: linear-gradient(0deg, #F2F3F7 37.4%, rgba(242, 243, 247, 0) 100%);
+  border-radius: $border-radius--24;
+
+  p {
+    font-weight: 500;
+
+    &:first-child {
+      position: relative;
+      margin: 32px 0;
+
+      &::before,
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background-size: 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      &::before {
+        top: -32px;
+        left: 0;
+        background-image: svg-load('../blocks/sprite-svg/svg/quote-left.svg', fill=$main-color);
+      }
+
+      &::after {
+        bottom: -32px;
+        right: 0;
+        background-image: svg-load('../blocks/sprite-svg/svg/quote-right.svg', fill=$main-color);
+      }
+    }
+  }
+
+  .signature {
+   margin-top: 8px;
+   margin-bottom: 0;
+   font-weight: initial;
+   font-style: italic;
+  }
 }
 
 dt {

@@ -1,14 +1,23 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/share-modal/share-modal.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="share-modal">content</div>
-
 -->
+
+<div class="modal fade  share-modal" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered  share-modal__dialog">
+    <div class="modal-content  share-modal__content">
+      <div class="modal-header  share-modal__header">
+        <h5 class="modal-title  share-modal__title" id="shareModalLabel">Поділитися с друзями</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Закрити">
+          <span></span>
+        </button>
+      </div>
+      <div class="modal-body  share-modal__body">
+        @@include('../../blocks/share-links/share-links.html')
+
+        <button id="copyButton" class="btn btn--primary">Копіювати посилання</button>
+        <p id="copySuccessMessage" style="display:none; margin-bottom:0; color:#219c5b;">Посилання скопійовано!</p>
+
+      </div>
+    </div>
+  </div>
+</div>
