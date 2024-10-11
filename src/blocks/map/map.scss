@@ -2,6 +2,7 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  position: relative;
   margin: 72px 0 40px;
 
   iframe {
@@ -10,7 +11,7 @@
   }
 
   &__inner {
-    position: relative;
+    //position: relative;
     height: 595px;
     background-color: $gray-lightest;
     border-radius: $border-radius;
@@ -27,10 +28,11 @@
     display: flex;
     align-items: center;
     position: absolute;
+    z-index: 1;
     top: 0;
     left: 50%;
     height: 54px;
-    padding: 0 4px;
+    padding: 0 6px;
     margin: 0;
     color: $white;
     background-color: $text-color;
@@ -53,13 +55,13 @@
     }
 
     &::before {
-      left: -53px;
+      left: -52px;
       background-position: top right;
       transform: scale(-1, 1);
     }
 
     &::after {
-      right: -53px;
+      right: -52px;
       background-position: top left;
     }
   }

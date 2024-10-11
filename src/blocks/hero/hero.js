@@ -11,8 +11,8 @@
       el: '.swiper-pagination',
       type: 'bullets',
     },
-    // autoplay: {
-    //  delay: 5000,
-    // },
+    autoplay: {
+      delay: 4000,
+    },
   });
 }());
