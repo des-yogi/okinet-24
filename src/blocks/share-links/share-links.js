@@ -1,5 +1,7 @@
 (function(){
-  document.getElementById("copyButton").addEventListener("click", function() {
+  const copyBtn = document.getElementById("copyButton");
+  if (!copyBtn) return;
+  copyBtn.addEventListener("click", function() {
     const pageUrl = window.location.href;
 
     navigator.clipboard.writeText(pageUrl).then(function() {
