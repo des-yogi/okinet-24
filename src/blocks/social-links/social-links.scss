@@ -8,6 +8,17 @@
     gap: 0 4px;
   }
 
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+
+    span {
+      font-size: $font-size-sm;
+      color: #27a5e5;
+    }
+  }
+
   &__link {
     display: flex;
     align-items: center;

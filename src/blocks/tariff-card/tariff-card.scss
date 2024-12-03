@@ -1,11 +1,18 @@
 .tariff-card {
   width: 288px;
+  height: 100% !important;
   padding: 16px 24px;
   background-color: $white;
   border: 1px solid $border-color;
   border-radius: $border-radius--24;
 
   $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
   &__top {
     display: flex;
@@ -115,6 +122,7 @@
   &__option {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     position: relative;
     padding-left: 24px;
     color: $text-muted;
@@ -136,6 +144,18 @@
       background-repeat: no-repeat;
       background-size: 16px;
       background-image: svg-load('../blocks/sprite-svg/svg/minus-circle.svg', fill=$text-muted);
+    }
+
+    & > svg {
+      width: 24px;
+      height: 24px;
+      fill: $main-color !important;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        fill: #97252c !important;
+      }
     }
 
     &--active {
@@ -177,6 +197,7 @@
   }
 
   &__order {
+    margin-top: auto;
 
     .btn {
       width: 100%;
@@ -207,10 +228,6 @@
 
     #{$block-name}__price {
       color: $tag--purple;
-    }
-
-    #{$block-name}__order {
-
     }
   }
 }

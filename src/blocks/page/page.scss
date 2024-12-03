@@ -15,7 +15,7 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -ms-overflow-style: scrollbar;
   -ms-text-size-adjust: 100%; // stylelint-disable-line  property-no-vendor-prefix
-  min-width: 360px;
+  min-width: 320px;
   min-height: 100%;
   scroll-behavior: smooth;
 
@@ -365,6 +365,36 @@ a {
   font-size: $font-size;
   line-height: 1;
   color: $main-color;
+}
+
+.business-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  width: 100%;
+  padding: 0 8px;
+  margin-top: 16px;
+  font-size: $font-size-sm;
+  font-weight: 500;
+  color: $main-color;
+  background-color: transparent;
+  border-radius: $border-radius--32;
+
+  &:hover,
+  &:focus {
+    color: #97252c;
+    background-color: $block-bg;
+    text-decoration: none;
+  }
+
+  &:active {
+    background-color: #d8d8d8;
+  }
+
+  span {
+    line-height: 1;
+  }
 }
 
 // background-image: svg-load('../blocks/block-name/bg-img/phone.svg', fill=$main-color);

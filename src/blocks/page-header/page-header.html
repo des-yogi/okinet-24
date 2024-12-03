@@ -5,7 +5,7 @@
 <header class="page-header">
   <div class="container  page-header__inner">
 
-    <div class="page-header__top">
+    <div class="page-header__top  page-header__top--sticky">
 
       <div class="page-header__left">
         <button class="call-me-link" data-bs-toggle="modal" data-bs-target="#callMeModal">
@@ -13,7 +13,9 @@
           <span>Зателефонуйте мені</span>
         </button>
 
-        @@include('../../blocks/social-links/social-links.html')
+        <a href="tel:+380443000062" class="page-header__tel-link  page-header__tel-link--add">
+          +38 (044) 300-00-62
+        </a>
       </div>
 
       <div class="page-header__batt-wrapper">
@@ -24,7 +26,35 @@
       </div>
 
       <div class="page-header__right">
-        <a href="tel:+380443000062" class="page-header__tel-link">+38 (044) 300-00-62</a>
+        <section class="social-links">
+          <h2 class="visually-hidden">Мессенджери</h2>
+          <ul class="list-nostyled  social-links__list">
+            <li class="social-links__item">
+              <a href="#" class="social-links__link" title="Viber" target="_blank" rel="nofollow noopener">
+                <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#viber"></use></svg>
+              </a>
+            </li>
+            <li class="social-links__item">
+              <a href="#" class="social-links__link" title="Telegram" target="_blank" rel="nofollow noopener">
+                <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#tg"></use></svg>
+              </a>
+            </li>
+            <li class="social-links__item">
+              <a href="#" class="social-links__link" title="Telegram bot" target="_blank" rel="nofollow noopener">
+                <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#tg-bot"></use></svg>
+              </a>
+              <span>Бот</span>
+            </li>
+          </ul>
+        </section>
+
+        <a href="#" class="page-header__pay-link">
+          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wallet"></use></svg>
+          <span>Оплата</span>
+        </a>
+
+        <a href="tel:+380443000062" class="page-header__tel-link  page-header__tel-link--add">+38 (044) 300-00-62</a>
+
         <a href="#" class="page-header__tel-link  page-header__tel-link--user-top">
           <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"></use></svg>
           <span>Особистий кабінет</span>
@@ -33,12 +63,23 @@
 
     </div>
 
-    <div class="page-header__main">
+    <div class="page-header__main  page-header__main--sticky">
       @@include('../../blocks/logo/logo.html')
 
       @@include('../../blocks/main-nav/main-nav.html')
 
       <div class="page-header__service">
+
+        <button class="call-me-link" data-bs-toggle="modal" data-bs-target="#callMeModal">
+          <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone-call"></use></svg>
+          <span>Зателефонуйте мені</span>
+        </button>
+
+        <a href="#" class="page-header__pay-link">
+          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wallet"></use></svg>
+          <span>Оплата</span>
+        </a>
+
         <a href="#" class="page-header__tel-link  page-header__tel-link--user  page-header__tel-link--user-main">
           <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"></use></svg>
           <span>Особистий кабінет</span>

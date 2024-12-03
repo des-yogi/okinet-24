@@ -5,7 +5,7 @@ const fs = require('fs');
 const gulp = require('gulp');
 const babel = require('gulp-babel');
 const browserSync = require('browser-sync').create();
-const realFavicon = require ('gulp-real-favicon');
+//const realFavicon = require ('gulp-real-favicon');
 
 const postcss = require('gulp-postcss');
 const removeComments = require('postcss-discard-comments');
@@ -36,7 +36,7 @@ let repoUrl = require('./package.json').repository.url.replace(/\.git$/g, '');
 // console.log(repoUrl);
 
 // файл с настройками фавиконок
-const faviconData = './faviconData.json';
+//const faviconData = './faviconData.json';
 
 // Формирование и запись диспетчера подключений (style.scss), который компилируется в style.min.css
 let styleImports = '/*!*\n * ВНИМАНИЕ! Этот файл генерируется автоматически.\n * Не пишите сюда ничего вручную, все такие правки будут потеряны.\n * Читайте ./README.md для понимания.\n */\n\n';
@@ -218,76 +218,76 @@ gulp.task('copy:fonts', function () {
 });
 
 // Генератор фавиконок
-gulp.task('favicons', function(done) {
-  realFavicon.generateFavicon({
-    masterPicture: dirs.srcPath + '/img/favicon-lg.png',
-    dest: dirs.buildPath + '/img',
-    iconsPath: '/img',
-    design: {
-      ios: {
-        pictureAspect: 'backgroundAndMargin',
-        backgroundColor: '#ffffff',
-        margin: '14%',
-        assets: {
-          ios6AndPriorIcons: false,
-          ios7AndLaterIcons: false,
-          precomposedIcons: false,
-          declareOnlyDefaultIcon: true
-        }
-      },
-      desktopBrowser: {},
-      windows: {
-        pictureAspect: 'noChange',
-        backgroundColor: '#ffffff',
-        onConflict: 'override',
-        assets: {
-          windows80Ie10Tile: false,
-          windows10Ie11EdgeTiles: {
-            small: false,
-            medium: true,
-            big: false,
-            rectangle: false
-          }
-        }
-      },
-      androidChrome: {
-        pictureAspect: 'noChange',
-        themeColor: '#ffffff',
-        manifest: {
-          display: 'standalone',
-          orientation: 'notSet',
-          onConflict: 'override',
-          declared: true
-        },
-        assets: {
-          legacyIcon: false,
-          lowResolutionIcons: false
-        }
-      },
-      safariPinnedTab: {
-        pictureAspect: 'silhouette',
-        themeColor: '#ffffff'
-      }
-    },
-    settings: {
-      scalingAlgorithm: 'Mitchell',
-      errorOnImageTooSmall: false
-    },
-    markupFile: faviconData
-  }, function() {
-    done();
-  });
-});
+// gulp.task('favicons', function(done) {
+//   realFavicon.generateFavicon({
+//     masterPicture: dirs.srcPath + '/img/favicon-lg.png',
+//     dest: dirs.buildPath + '/img',
+//     iconsPath: '/img',
+//     design: {
+//       ios: {
+//         pictureAspect: 'backgroundAndMargin',
+//         backgroundColor: '#ffffff',
+//         margin: '14%',
+//         assets: {
+//           ios6AndPriorIcons: false,
+//           ios7AndLaterIcons: false,
+//           precomposedIcons: false,
+//           declareOnlyDefaultIcon: true
+//         }
+//       },
+//       desktopBrowser: {},
+//       windows: {
+//         pictureAspect: 'noChange',
+//         backgroundColor: '#ffffff',
+//         onConflict: 'override',
+//         assets: {
+//           windows80Ie10Tile: false,
+//           windows10Ie11EdgeTiles: {
+//             small: false,
+//             medium: true,
+//             big: false,
+//             rectangle: false
+//           }
+//         }
+//       },
+//       androidChrome: {
+//         pictureAspect: 'noChange',
+//         themeColor: '#ffffff',
+//         manifest: {
+//           display: 'standalone',
+//           orientation: 'notSet',
+//           onConflict: 'override',
+//           declared: true
+//         },
+//         assets: {
+//           legacyIcon: false,
+//           lowResolutionIcons: false
+//         }
+//       },
+//       safariPinnedTab: {
+//         pictureAspect: 'silhouette',
+//         themeColor: '#ffffff'
+//       }
+//     },
+//     settings: {
+//       scalingAlgorithm: 'Mitchell',
+//       errorOnImageTooSmall: false
+//     },
+//     markupFile: faviconData
+//   }, function() {
+//     done();
+//   });
+// });
 
 // Ручная проверка актуальности данных для favicon. Запускать перед стартом нового проекта.
-gulp.task('check:favicons:update', function(done) {
-  var currentVersion = JSON.parse(fs.readFileSync(faviconData)).version;
-  realFavicon.checkForUpdates(currentVersion, function(err) {
-    if (err) {
-      throw err;
-    }
-  });
-});
+// gulp.task('check:favicons:update', function(done) {
+//   var currentVersion = JSON.parse(fs.readFileSync(faviconData)).version;
+//   realFavicon.checkForUpdates(currentVersion, function(err) {
+//     if (err) {
+//       throw err;
+//     }
+//   });
+// });
 
 // Сборка SVG-спрайта для блока sprite-svg
 let spriteSvgPath = dirs.srcPath + dirs.blocksDirName + '/sprite-svg/svg/';
@@ -397,7 +397,7 @@ gulp.task('html', function() {
       basepath: '@file',
       indent: true,
     }))
-    .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(faviconData)).favicon.html_code))
+    //.pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(faviconData)).favicon.html_code))
     .pipe(replace(/\n\s*<!--DEV[\s\S]+?-->/gm, ''))
     .pipe(gulp.dest(dirs.buildPath));
 });
@@ -460,7 +460,7 @@ gulp.task('img:opt', function (callback) {
 // Сборка всего новая под gulp 4
 gulp.task('build', gulp.series(
   'clean',
-  gulp.parallel('sprite:svg', 'sprite:png', 'favicons'),
+  gulp.parallel('sprite:svg', 'sprite:png'),
   gulp.parallel('style', 'style:single', 'js', 'copy:css', 'copy:img', 'copy:js', 'copy:fonts'),
   'html'
 ));

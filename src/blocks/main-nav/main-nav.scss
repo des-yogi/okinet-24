@@ -2,8 +2,11 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  display: inline-flex;
+  align-items: center;
+  gap: 0 20px;
   position: relative;
-  z-index: 10;
+  z-index: 1;
 
   // первый уровень
   &__list {
@@ -33,7 +36,7 @@
     @media (min-width: $menu-desktop-width) {
       display: flex;
       flex-wrap: wrap;
-      gap: 0 8px;
+      gap: 0 4px;
     }
 
     &--lvl-2 {
@@ -131,7 +134,7 @@
 
   &__link {
     display: block;
-    padding: 4px 8px;
+    padding: 8px 6px;
     font-size: $font-size-sm;
     font-weight: 500;
     text-decoration: none;
@@ -214,20 +217,26 @@
 
 
 
-  // переключатель
+  .business-link {
+    width: auto;
+    min-height: 44px;
+    margin: 0;
+    position: relative;
 
-  /* &__toggler {
-    display: inline-block;
-    padding: 0;
-    background: none;
-    border: none;
-
-    .no-js & {
+    @media (max-width: ($menu-desktop-width - 1)) {
       display: none;
     }
 
-    @media (min-width: $menu-desktop-width) {
-      display: none;
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      transform: translateY(-50%);
+      width: 2px;
+      height: 22px;
+      background-color: #d9d9d9;
     }
-  } */
+  }
 }

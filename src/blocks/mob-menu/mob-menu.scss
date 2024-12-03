@@ -83,6 +83,39 @@
     }
   }
 
+  &__tel {
+    margin: 16px 0;
+  }
+
+  &__tel-caption {
+    margin: 0 0 12px;
+    color: $text-muted;
+  }
+
+  &__tel-list {
+
+  }
+
+  &__tel-item {
+
+    & + & {
+      margin-top: 4px;
+    }
+  }
+
+  &__tel-link {
+    display: inline-flex;
+    padding: 4px 0;
+    font-weight: 500;
+    color: $title-color;
+
+    &:hover,
+    &:focus {
+      color: #97252c;
+      text-decoration: none;
+    }
+  }
+
   .modal-dialog {
 
     @media (min-width: $screen-md) {
@@ -108,6 +141,7 @@
 
   .modal-header {
     flex-wrap: wrap;
+    padding-bottom: 0;
     border-bottom: none;
   }
 
