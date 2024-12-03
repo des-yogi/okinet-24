@@ -87,7 +87,9 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
     const phoneMask = IMask(
       item, {
         mask: '+{38\\0} (00) 000 00 00',
-        lazy: false // make placeholder always visible
+        lazy: true // make placeholder always visible
     });
   });
 }());
+
+

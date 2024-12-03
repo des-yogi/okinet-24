@@ -1,0 +1,29 @@
+.tooltip {
+  color: $title-color;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &.show {
+    opacity: 1;
+  }
+}
+
+.tooltip-inner {
+  padding: 8px;
+  background-color: $body-bg;
+  border-radius: $border-radius / 2;
+  border: 1px solid $border-color;
+
+  p {
+    hyphens: none;
+
+    &:first-child {
+      margin: 0;
+    }
+
+    &:last-child {
+      margin-top: 8px;
+      margin-bottom: 0;
+    }
+  }
+}

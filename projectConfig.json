@@ -72,7 +72,8 @@
     "history": [],
     "error-404": [],
     "text-doc": [],
-    "share-links": []
+    "share-links": [],
+    "tooltip": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
@@ -82,6 +83,7 @@
     "../../node_modules/bootstrap/scss/_nav",
     "../../node_modules/bootstrap/scss/_accordion",
     "../../node_modules/bootstrap/scss/_modal",
+    "../../node_modules/bootstrap/scss/_tooltip",
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "../../node_modules/swiper/swiper-bundle.css"

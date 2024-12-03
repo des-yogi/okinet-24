@@ -11,6 +11,7 @@
 @import '../../node_modules/bootstrap/scss/_nav';
 @import '../../node_modules/bootstrap/scss/_accordion';
 @import '../../node_modules/bootstrap/scss/_modal';
+@import '../../node_modules/bootstrap/scss/_tooltip';
 @import './src/scss/variables.scss';
 @import './src/scss/mixins.scss';
 @import '../../node_modules/swiper/swiper-bundle.css';
@@ -87,4 +88,5 @@
 @import './src/blocks/error-404/error-404.scss';
 @import './src/blocks/text-doc/text-doc.scss';
 @import './src/blocks/share-links/share-links.scss';
+@import './src/blocks/tooltip/tooltip.scss';
 @import './src/scss/print.scss';
