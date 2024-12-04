@@ -3,7 +3,7 @@
     speed: 400,
     spaceBetween: 16,
     slidesPerView: 'auto',
-    autoHeight: true,
+    //autoHeight: true,
     grabCursor: true,
     navigation: {
       nextEl: '.swiper-button-next',
@@ -25,7 +25,7 @@
     speed: 400,
     spaceBetween: 16,
     slidesPerView: 'auto',
-    autoHeight: true,
+    //autoHeight: true,
     grabCursor: true,
     navigation: {
       nextEl: '.swiper-button-next',
@@ -47,7 +47,7 @@
     speed: 400,
     spaceBetween: 16,
     slidesPerView: 'auto',
-    autoHeight: true,
+    //autoHeight: true,
     grabCursor: true,
     navigation: {
       nextEl: '.swiper-button-next',
