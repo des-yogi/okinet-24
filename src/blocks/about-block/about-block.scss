@@ -9,12 +9,6 @@
     @include col(xl, 8);
   }
 
-  h2,
-  h3,
-  h4,
-  .h2,
-  .h3,
-  .h4,
   &__title {
     margin: 0 0 16px;
   }
@@ -23,6 +17,10 @@
 
     * {
       margin-bottom: 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
 
     * + * {
